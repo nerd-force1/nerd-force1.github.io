@@ -5,4 +5,4 @@
 layout: home
 testwerte
 ---
-<img src="/img/twitter_icon.png" width="100">
+[![twitter_icon](/img/twitter_icon.png)](https://twitter.com/nerd_force1)
