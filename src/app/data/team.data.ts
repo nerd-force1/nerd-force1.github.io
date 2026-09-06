@@ -80,8 +80,8 @@ export const TEAM: readonly TeamMember[] = [
     ],
   },
   {
-    // No own site or public profile yet, so the @id is minted here (same pattern as the
-    // Service ids); move it to his own domain once he publishes one.
+    // No own site yet, so the @id is minted here (same pattern as the Service ids);
+    // move it to his own domain once he publishes one.
     key: 'malte',
     id: 'https://nerd-force1.com/#person-malte-kottmann',
     name: 'Malte Kottmann',
@@ -89,7 +89,10 @@ export const TEAM: readonly TeamMember[] = [
     familyName: 'Kottmann',
     jobTitle: 'Security Engineer',
     freelance: true,
-    url: 'https://nerd-force1.com/en/about#malte',
-    links: [],
+    url: 'https://github.com/maltonoloco',
+    links: [
+      { label: 'GitHub', href: 'https://github.com/maltonoloco' },
+      { label: 'OpenTaberna', href: 'https://github.com/maltonoloco/opentaberna' },
+    ],
   },
 ];
