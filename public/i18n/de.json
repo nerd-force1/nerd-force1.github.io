@@ -267,6 +267,26 @@
     "body1": "nerd_force1 ist eine kleine Spezialistin für souveräne Infrastruktur aus Bochum. Seit sechs Jahren bauen und betreiben wir selbst gehostete Plattformen – aktuell über 100 Nodes und Geräte. Kein Vertrieb, keine Zwischenebene: Du sprichst direkt mit der Person, die deine Infrastruktur baut.",
     "body2": "Wir arbeiten stark automatisiert und alles als Code. Das ist der Grund, warum ein sehr kleines Team eine Plattform dieser Größe betreiben kann – und warum wir ehrlich sagen, was wir nicht leisten: einen 24×7-Bereitschaftsdienst gibt es nicht. Wenn du den brauchst, sagen wir es dir und empfehlen jemand anderen."
   },
+  "team": {
+    "label": "Team",
+    "title": "Drei Leute, die selbst bauen.",
+    "sub": "Keine Vertriebsebene: Wer hier steht, baut und betreibt deine Plattform auch.",
+    "managingDirector": "Geschäftsführer",
+    "members": {
+      "odin": {
+        "role": "CSO · Chief Strategy Officer",
+        "blurb": "Mitgründer und Geschäftsführer der Auto-Intern GmbH, C++-Experte für eingebettete Systeme und Autor von Kvasir. Gibt bei nerd_force1 die strategische Richtung vor."
+      },
+      "stephan": {
+        "role": "COO · Chief Operating Officer",
+        "blurb": "Ingenieur und Physiker, Systemarchitekt des skAInet Edge-Compute und COO der Auto-Intern GmbH. Verantwortet Betrieb, Projekte und Lieferfähigkeit."
+      },
+      "philipp": {
+        "role": "CTO · Chief Technology Officer",
+        "blurb": "Head of Automation and Deployment. Verantwortet Server, Deployment und die Automatisierung der Infrastruktur, auf der unsere Shops und Plattformen laufen."
+      }
+    }
+  },
   "kontakt": {
     "label": "Kontakt",
     "title": "Lass uns reden",

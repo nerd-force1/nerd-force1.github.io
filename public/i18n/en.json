@@ -267,6 +267,26 @@
     "body1": "nerd_force1 is a small sovereign-infrastructure specialist based in Bochum, Germany. For six years we have built and operated self-hosted platforms — currently more than 100 nodes and devices. No sales layer, no account manager: you talk directly to the person who builds your infrastructure.",
     "body2": "We work heavily automated, everything as code. That is why a very small team can run a platform this size — and why we are equally direct about what we don't offer: there is no 24×7 on-call rota. If you need one, we'll say so and point you elsewhere."
   },
+  "team": {
+    "label": "Team",
+    "title": "Three people who build it themselves.",
+    "sub": "No sales layer: the people listed here build and run your platform.",
+    "managingDirector": "Managing Director",
+    "members": {
+      "odin": {
+        "role": "CSO · Chief Strategy Officer",
+        "blurb": "Co-founder and managing director of Auto-Intern GmbH, C++ expert for embedded systems and author of Kvasir. Sets the strategic direction of nerd_force1."
+      },
+      "stephan": {
+        "role": "COO · Chief Operating Officer",
+        "blurb": "Engineer and physicist, system architect of the skAInet Edge-Compute and COO of Auto-Intern GmbH. Owns operations, projects and delivery."
+      },
+      "philipp": {
+        "role": "CTO · Chief Technology Officer",
+        "blurb": "Head of Automation and Deployment. Owns servers, deployment and the automation of the infrastructure our shops and platforms run on."
+      }
+    }
+  },
   "kontakt": {
     "label": "Contact",
     "title": "Let's talk",
