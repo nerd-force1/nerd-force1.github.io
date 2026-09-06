@@ -48,7 +48,7 @@ See https://nerd-force1.com/en/about#team. Entity IDs are the canonical ones use
 - Stephan Bökelmann – Chief Operating Officer; engineer and physicist, system architect of the skAInet Edge-Compute, COO of Auto-Intern GmbH, managing director of nabla B. Entity ID https://maxclerkwell.tech/#person, site https://maxclerkwell.tech
 - Philipp Lehmann – Chief Technology Officer; Head of Automation and Deployment, responsible for servers, deployment and infrastructure automation. Entity ID https://www.auto-intern.de/ueber-uns#philipp-lehmann
 - Dominic Becker – Security Engineer; IT security engineer focused on embedded security for decentralised systems, secure backends and data pipelines; 5G traffic-analysis research at Ruhr University Bochum. Entity ID https://dobe-1.dev/#person, site https://dobe-1.dev
-- Malte Kottmann – Security Engineer, freelance collaborator (freier Mitarbeiter); brings his open-source project open-taberna, works on hardening, security reviews and secure deployments. Entity ID https://nerd-force1.com/#person-malte-kottmann, GitHub https://github.com/maltonoloco, OpenTaberna https://github.com/maltonoloco/opentaberna
+- Malte Kottmann – Security Engineer, freelance collaborator (freier Mitarbeiter); brings his open-source project OpenTaberna, works on hardening, security reviews and secure deployments. Entity ID https://nerd-force1.com/#person-malte-kottmann, GitHub https://github.com/maltonoloco, OpenTaberna https://github.com/maltonoloco/opentaberna
 
 ## Pages
 
