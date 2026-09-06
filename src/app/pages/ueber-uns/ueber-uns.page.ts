@@ -59,7 +59,11 @@ function teamGraph(): object {
   return {
     '@context': 'https://schema.org',
     '@graph': [
-      { ...organizationNode(), employee: TEAM.map((m) => ({ '@id': m.id })) },
+      {
+        ...organizationNode(),
+        employee: TEAM.filter((m) => !m.freelance).map((m) => ({ '@id': m.id })),
+        member: TEAM.filter((m) => m.freelance).map((m) => ({ '@id': m.id })),
+      },
       ...TEAM.map((m) => ({
         '@type': 'Person',
         '@id': m.id,
@@ -68,10 +72,12 @@ function teamGraph(): object {
         familyName: m.familyName,
         jobTitle: m.managingDirector
           ? [`${m.jobTitle}, nerd_force1 UG`, 'Geschäftsführer, nerd_force1 UG']
-          : `${m.jobTitle}, nerd_force1 UG`,
+          : m.freelance
+            ? `${m.jobTitle} (freelance), nerd_force1 UG`
+            : `${m.jobTitle}, nerd_force1 UG`,
         url: m.url,
-        worksFor: { '@id': ORGANIZATION_ID },
-        sameAs: m.links.map((l) => l.href),
+        ...(m.freelance ? { memberOf: { '@id': ORGANIZATION_ID } } : { worksFor: { '@id': ORGANIZATION_ID } }),
+        ...(m.links.length ? { sameAs: m.links.map((l) => l.href) } : {}),
       })),
     ],
   };

@@ -269,9 +269,10 @@
   },
   "team": {
     "label": "Team",
-    "title": "Vier Leute, die selbst bauen.",
+    "title": "Fünf Leute, die selbst bauen.",
     "sub": "Keine Vertriebsebene: Wer hier steht, baut und betreibt deine Plattform auch.",
     "managingDirector": "Geschäftsführer",
+    "freelance": "freier Mitarbeiter",
     "members": {
       "odin": {
         "role": "CSO · Chief Strategy Officer",
@@ -288,6 +289,10 @@
       "dominic": {
         "role": "Security Engineer",
         "blurb": "IT-Security-Ingenieur mit Schwerpunkt Embedded Security für dezentrale Systeme. Baut sichere Backends und Datenpipelines und hat an der RUB zu Traffic-Analyse in 5G-Netzen geforscht."
+      },
+      "malte": {
+        "role": "Security Engineer",
+        "blurb": "Security Engineer und freier Mitarbeiter. Bringt sein Open-Source-Projekt open-taberna ein und arbeitet an Härtung, Security-Reviews und sicheren Deployments unserer Plattformen."
       }
     }
   },

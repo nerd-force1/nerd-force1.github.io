@@ -7,7 +7,7 @@
 import { ORGANIZATION_ID } from './organization.data';
 export { ORGANIZATION_ID };
 export interface TeamMember {
-  readonly key: 'odin' | 'stephan' | 'philipp' | 'dominic';
+  readonly key: 'odin' | 'stephan' | 'philipp' | 'dominic' | 'malte';
   readonly id: string;
   readonly name: string;
   readonly givenName: string;
@@ -16,6 +16,9 @@ export interface TeamMember {
   readonly jobTitle: string;
   /** Registered Geschäftsführer per Impressum — shown alongside the CEO title. */
   readonly managingDirector?: boolean;
+  /** External collaborator (freier Mitarbeiter), not an employee — shown as a badge, and
+   *  JSON-LD lists them under `member` rather than `employee`. */
+  readonly freelance?: boolean;
   readonly url: string;
   readonly links: ReadonlyArray<{ readonly label: string; readonly href: string }>;
 }
@@ -75,5 +78,18 @@ export const TEAM: readonly TeamMember[] = [
       { label: 'GitHub', href: 'https://github.com/dobe-1' },
       { label: 'LinkedIn', href: 'https://www.linkedin.com/in/dominic-b-a2b721231' },
     ],
+  },
+  {
+    // No own site or public profile yet, so the @id is minted here (same pattern as the
+    // Service ids); move it to his own domain once he publishes one.
+    key: 'malte',
+    id: 'https://nerd-force1.com/#person-malte-kottmann',
+    name: 'Malte Kottmann',
+    givenName: 'Malte',
+    familyName: 'Kottmann',
+    jobTitle: 'Security Engineer',
+    freelance: true,
+    url: 'https://nerd-force1.com/en/about#malte',
+    links: [],
   },
 ];
