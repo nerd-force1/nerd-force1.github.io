@@ -16,6 +16,7 @@ import { TEAM } from '../../../data/team.data';
             <p class="mt-1 text-sm text-accent">
               {{ 'team.members.' + m.key + '.role' | translate }}
               @if (m.managingDirector) { · {{ 'team.managingDirector' | translate }} }
+              @if (m.freelance) { · {{ 'team.freelance' | translate }} }
             </p>
             <p class="mt-3 text-sm text-text-secondary">{{ 'team.members.' + m.key + '.blurb' | translate }}</p>
           </div>
