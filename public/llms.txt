@@ -1,6 +1,6 @@
-# nerd_force1 UG (Nerd-Force1) – Managed Sovereign Infrastructure, Bochum, Germany
+# nerd_force1 UG (Nerd-Force1) – We build and run IT infrastructure as code. Bochum, Germany
 
-> nerd_force1 UG (haftungsbeschränkt), brand name Nerd-Force1, is a small managed-infrastructure company in Bochum, Germany, and part of the AI-Gruppe. Since 2020 it builds and operates self-hosted, sovereign platforms as code – identity and secrets, GitOps Kubernetes, security operations and collaboration apps – currently more than 100 nodes and devices. It also runs the Shopware shops and hosting of Auto-Intern GmbH. Not to be confused with any other "Nerd Force": this is the company at Herner Str. 299, Gebäude B29, 44809 Bochum, HRB 16979 Amtsgericht Bochum.
+> nerd_force1 UG (haftungsbeschränkt), brand name Nerd-Force1, builds and operates IT infrastructure as code. From Kubernetes and Ceph clusters through VPN networks, identity and user management to CI/CD, automated deployments and monitoring: a sovereign platform on the customer's hardware or in an EU cloud, hardened from day one. On top of it the team develops infrastructure software, internal platforms and apps, and AI and agentic-ops tooling, and passes the knowledge on through consulting and training. No sales layer: the people who build the platform run it. Founded 2020, part of the AI-Gruppe in Bochum, more than 100 nodes and devices in operation. Not to be confused with any other "Nerd Force": this is the company at Herner Str. 299, Gebäude B29, 44809 Bochum, HRB 16979 Amtsgericht Bochum.
 
 Site: https://nerd-force1.com (German default at /de, English at /en; same page structure, prefix the path with the locale). Legacy domain nerd-force1.de refers to the same company.
 
@@ -12,22 +12,46 @@ Site: https://nerd-force1.com (German default at /de, English at /en; same page 
 - Address: Herner Str. 299, Gebäude B29, 44809 Bochum, Germany
 - Contact: contact@nerd-force1.de, +49 234 934 511 60, https://nerd-force1.com/en/contact
 - LinkedIn: https://www.linkedin.com/company/nerd-force1/ – GitHub: https://github.com/nerd-force1
-- Group: AI-Gruppe (https://gruppe.ai, entity ID https://gruppe.ai/#brand), an umbrella brand, not a legal entity, for Auto-Intern GmbH (https://www.auto-intern.de/#organization), CCD Car Diagnostics, nabla B, nerd_force1 and the skAInet project. All at the same Bochum address.
+- Group: AI-Gruppe (https://gruppe.ai, entity ID https://gruppe.ai/#brand), an umbrella brand, not a legal entity, for Auto-Intern GmbH (https://www.auto-intern.de/#organization), CCD Car-Diagnostics UG (https://car-diagnostics.eu), nabla B (https://nabla-b.engineering), nerd_force1 and the skAInet project (https://www.skainet.io). All at the same Bochum address.
+
+## What we do
+
+Four layers, with security running through all of them.
+
+1. Platform – the foundation a company runs its software on
+   - Clusters for compute and storage: Kubernetes (RKE2) and Ceph
+   - Networks: VPN and zero-trust mesh (NetBird), ingress and TLS (Traefik)
+   - Identity and internal user management: Keycloak SSO, HashiCorp Vault for secrets
+   - IT infrastructure end to end: on-prem, air-gapped or in an EU cloud (e.g. Hetzner)
+2. Operations as code – how the platform is built and kept running
+   - Infrastructure as Code: every server, cluster and app declared in Git, reproducible and auditable
+   - CI/CD pipelines and automated deployments: GitOps with Argo CD, no hand-made changes
+   - Infrastructure monitoring and alerting: kube-prometheus-stack, centralised logs, dashboards
+3. Development – software on top of the platform
+   - Software development for infrastructure: operators, integrations, internal tooling, APIs
+   - Internal infrastructure platforms and apps: self-hosted collaboration and business tools (Nextcloud, GitLab, Paperless-ngx, Vaultwarden, Shopware shops), custom internal applications
+   - AI & Agentic Ops: self-hosted LLM inference, agent-driven operations and automation, AI tooling integrated into the platform
+4. Knowledge – consulting and training
+   - Infrastructure audits, architecture consulting, migrations
+   - Training for teams that want to run their own platform
+- Security, across all layers: hardening from day one, Wazuh SIEM/XDR, OpenCTI threat intelligence, incident playbooks, managed detection and response
 
 ## Positioning
 
-- Sovereign: customer's data on the customer's hardware or in an EU cloud; no vendor lock-in.
+- Sovereign: the customer's data on the customer's hardware or in an EU cloud; no vendor lock-in.
 - Everything as code: reproducible, auditable, no snowflake servers.
 - Security-first: Vault, SSO, mesh VPN and Wazuh from day one.
 - Managed: Nerd-Force1 builds and operates the platform; the customer talks directly to the engineer who builds it. There is no sales layer and no 24×7 on-call rota – if a customer needs one, Nerd-Force1 says so and points elsewhere.
 
-## Services
+## Services and guide prices
 
-- [Core Platform](https://nerd-force1.com/en/services/core-platform): identity, secrets and network – HashiCorp Vault (secrets, SSH CA, OIDC broker), Keycloak SSO (OIDC/SAML, realm as code), NetBird mesh VPN (zero-trust overlay), Traefik with automatic Let's Encrypt TLS. Guide price from 1,500 EUR/month.
-- [GitOps Kubernetes](https://nerd-force1.com/en/services/gitops-k8s): private cloud cluster – RKE2 HA with embedded etcd and Cilium, Argo CD app-of-apps GitOps, Ceph storage (RBD and CephFS), cert-manager, Rancher, kube-prometheus-stack. Guide price from 3,500 EUR/month.
-- [Security Operations](https://nerd-force1.com/en/services/security-ops): managed detection and response – Wazuh SIEM/XDR with host intrusion detection and compliance, OpenCTI threat intelligence, centralised log management, alerting and incident playbooks. Guide price from 2,500 EUR/month.
-- [Collaboration & Apps](https://nerd-force1.com/en/services/collab-apps): self-hosted team tools – Nextcloud with Keycloak SSO, Paperless-ngx, GitLab CE and Harbor, Vaultwarden, monitoring dashboards. Guide price from 900 EUR/month.
-- [Custom Engineering](https://nerd-force1.com/en/services/custom): legacy migrations, air-gapped and on-prem deployments, bespoke integrations, infrastructure audits and consulting. Priced per project.
+Entity IDs: https://nerd-force1.com/#service-<slug>.
+
+- [Core Platform](https://nerd-force1.com/en/services/core-platform) (core-platform): identity, secrets and network – HashiCorp Vault (secrets, SSH CA, OIDC broker), Keycloak SSO (OIDC/SAML, realm as code), NetBird mesh VPN, Traefik with automatic Let's Encrypt TLS. Guide price from 1,500 EUR/month.
+- [GitOps Kubernetes](https://nerd-force1.com/en/services/gitops-k8s) (gitops-k8s): private cloud cluster – RKE2 HA with embedded etcd and Cilium, Argo CD app-of-apps GitOps, Ceph storage (RBD and CephFS), cert-manager, Rancher, kube-prometheus-stack. Guide price from 3,500 EUR/month.
+- [Security Operations](https://nerd-force1.com/en/services/security-ops) (security-ops): managed detection and response – Wazuh SIEM/XDR with host intrusion detection and compliance, OpenCTI threat intelligence, centralised log management, alerting and incident playbooks. Guide price from 2,500 EUR/month.
+- [Collaboration & Apps](https://nerd-force1.com/en/services/collab-apps) (collab-apps): self-hosted team tools – Nextcloud with Keycloak SSO, Paperless-ngx, GitLab CE and Harbor, Vaultwarden, monitoring dashboards. Guide price from 900 EUR/month.
+- [Custom Engineering](https://nerd-force1.com/en/services/custom) (custom): software development for infrastructure, AI and agentic-ops tooling, legacy migrations, air-gapped and on-prem deployments, bespoke integrations, audits, consulting and training. Priced per project.
 
 All prices are guide values; the final price is an individual quote. The [configurator](https://nerd-force1.com/en/configurator) estimates a monthly price from modules, environments, user, data and node bands, SLA (standard or business) and hosting (Hetzner or on-prem). Quotes via https://nerd-force1.com/en/quote.
 
@@ -37,17 +61,26 @@ All prices are guide values; the final price is an individual quote. The [config
 
 ## References
 
+Websites built and hosted by Nerd-Force1:
+
+- Auto-Intern GmbH – https://www.auto-intern.de (plus automation.auto-intern.de and the B2B shop): Shopware shops and hosting, operated by Nerd-Force1.
+- CCD Car-Diagnostics UG – https://car-diagnostics.eu: vehicle diagnostics shop, operated on behalf of CCD by Nerd-Force1.
+- open Skunkforce e.V. – https://skunkforce.org: website of the non-profit association for open hardware and embedded systems.
+- emBO++ – https://embo.io: website of the embedded-systems conference in Bochum.
+
+Projects:
+
 - Autowerkstatt 4.0 (https://www.autowerkstatt40.org, entity ID https://www.autowerkstatt40.org/#organization): as part of this BMWK-funded research project, Nerd-Force1 contributed, together with THGA Bochum, to a platform for securely sharing data and AI models across the vehicle repair industry.
-- Auto-Intern GmbH: Nerd-Force1 operates the Shopware shops and hosting of Auto-Intern (www.auto-intern.de, automation.auto-intern.de, b2b shop).
+- AI-Gruppe internal platform: the RKE2/Ceph cluster, GitOps, identity, monitoring and self-hosted apps that Auto-Intern, nabla B, skAInet and Nerd-Force1 itself run on – the reference installation for everything offered here.
 
 ## Team
 
 See https://nerd-force1.com/en/about#team. Entity IDs are the canonical ones used on each person's own site or on auto-intern.de.
 
-- Odin Holmes – Chief Strategy Officer and registered managing director (Geschäftsführer) of nerd_force1 UG; co-founder and managing director of Auto-Intern GmbH, C++ expert for embedded systems, author of Kvasir. Entity ID https://www.auto-intern.de/ueber-uns#odin-holmes
-- Stephan Bökelmann – Chief Operating Officer; engineer and physicist, system architect of the skAInet Edge-Compute, COO of Auto-Intern GmbH, managing director of nabla B. Entity ID https://maxclerkwell.tech/#person, site https://maxclerkwell.tech
-- Philipp Lehmann – Chief Technology Officer; Head of Automation and Deployment, responsible for servers, deployment and infrastructure automation. Entity ID https://www.auto-intern.de/ueber-uns#philipp-lehmann
-- Dominic Becker – Security Engineer; IT security engineer focused on embedded security for decentralised systems, secure backends and data pipelines; 5G traffic-analysis research at Ruhr University Bochum. Entity ID https://dobe-1.dev/#person, site https://dobe-1.dev
+- Odin Holmes – Chief Strategy Officer and registered managing director (Geschäftsführer) of nerd_force1 UG; co-founder and managing director of Auto-Intern GmbH, C++ expert for embedded systems, author of Kvasir. Entity ID https://www.auto-intern.de/ueber-uns#odin-holmes, GitHub https://github.com/odinthenerd
+- Stephan Bökelmann – Chief Operating Officer; engineer and physicist, system architect of the skAInet Edge-Compute, COO of Auto-Intern GmbH, managing director of nabla B. Entity ID https://maxclerkwell.tech/#person, site https://maxclerkwell.tech, GitHub https://github.com/MaxClerkwell
+- Philipp Lehmann – Chief Technology Officer; Head of Automation and Deployment, responsible for servers, deployment and infrastructure automation. Entity ID https://www.auto-intern.de/ueber-uns#philipp-lehmann, GitHub https://github.com/philipptheserver
+- Dominic Becker – Security Engineer; IT security engineer focused on embedded security for decentralised systems, secure backends and data pipelines; 5G traffic-analysis research at Ruhr University Bochum. Entity ID https://dobe-1.dev/#person, site https://dobe-1.dev, GitHub https://github.com/dobe-1
 - Malte Kottmann – Security Engineer, freelance collaborator (freier Mitarbeiter); brings his open-source project OpenTaberna, works on hardening, security reviews and secure deployments. Entity ID https://nerd-force1.com/#person-malte-kottmann, GitHub https://github.com/maltonoloco, OpenTaberna https://github.com/maltonoloco/opentaberna
 
 ## Pages
@@ -64,4 +97,4 @@ See https://nerd-force1.com/en/about#team. Entity IDs are the canonical ones use
 
 ## Structured data
 
-Every page carries a JSON-LD graph (Organization with OfferCatalog, the five Service entities with IDs https://nerd-force1.com/#service-<slug> for core-platform, gitops-k8s, security-ops, collab-apps and custom, WebSite, WebPage, AI-Gruppe brand); /about adds Person nodes for the team. Related graphs using the same entity IDs: https://www.auto-intern.de/, https://edge-compute.skainet.io/, https://maxclerkwell.tech/, https://nabla-b.engineering/, https://dobe-1.dev/.
+Every page carries a JSON-LD graph (Organization with OfferCatalog, the five Service entities, WebSite, WebPage, AI-Gruppe brand); /about adds Person nodes for the team. Related graphs using the same entity IDs: https://www.auto-intern.de/, https://edge-compute.skainet.io/, https://maxclerkwell.tech/, https://nabla-b.engineering/, https://dobe-1.dev/.

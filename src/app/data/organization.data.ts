@@ -19,7 +19,7 @@ export const organizationNode = () => ({
   url: `${ORIGIN}/`,
   logo: `${ORIGIN}/brand/nf1-logo.png`,
   description:
-    'Managed sovereign infrastructure from Bochum, Germany: self-hosted platforms built and operated as code — identity and secrets (Vault, Keycloak, NetBird), GitOps Kubernetes (RKE2, Argo CD, Ceph), security operations (Wazuh, OpenCTI) and self-hosted collaboration apps. Marketing, shop and hosting service provider of the AI-Gruppe; operates the Shopware shops of Auto-Intern GmbH.',
+    'We build and run IT infrastructure as code. From Kubernetes and Ceph clusters through VPN networks, identity and user management to CI/CD, automated deployments and monitoring: a sovereign platform on your hardware or in an EU cloud, hardened from day one. On top of it we develop infrastructure software, internal platforms and apps, and AI and agentic-ops tooling, and pass the knowledge on through consulting and training. No sales layer: the people who build the platform run it. Part of the AI-Gruppe, Bochum; operates the websites and shops of Auto-Intern GmbH, CCD Car-Diagnostics, open Skunkforce e.V. and emBO++.',
   foundingDate: '2020',
   email: 'contact@nerd-force1.de',
   telephone: '+49-234-93451160',
@@ -37,7 +37,8 @@ export const organizationNode = () => ({
   knowsAbout: [
     'Kubernetes', 'GitOps', 'RKE2', 'Argo CD', 'Ceph', 'HashiCorp Vault', 'Keycloak', 'NetBird',
     'Traefik', 'Wazuh', 'OpenCTI', 'Nextcloud', 'GitLab', 'Shopware', 'Infrastructure as Code',
-    'Managed Detection and Response', 'Sovereign Cloud',
+    'Managed Detection and Response', 'Sovereign Cloud', 'CI/CD', 'Infrastructure Monitoring',
+    'AI Operations', 'Agentic Operations', 'Self-hosted LLM Inference', 'Consulting', 'Training',
   ],
   sameAs: ['https://nerd-force1.de/', 'https://www.linkedin.com/company/nerd-force1/', 'https://github.com/nerd-force1'],
 });
