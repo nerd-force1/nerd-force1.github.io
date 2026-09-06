@@ -7,7 +7,7 @@ import { TEAM } from '../../../data/team.data';
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [TranslatePipe],
   template: `
-    <ul class="grid gap-6 sm:grid-cols-3" role="list">
+    <ul class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4" role="list">
       @for (m of team; track m.key) {
         <li class="surface-card flex flex-col gap-4 p-6" [id]="m.key">
           <span class="mono-label" aria-hidden="true">{{ initials(m.givenName, m.familyName) }}</span>

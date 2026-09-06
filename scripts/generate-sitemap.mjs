@@ -5,7 +5,7 @@
 // URLs exist is worse than none.
 import { readFileSync, writeFileSync } from 'node:fs';
 
-const ORIGIN = 'https://nerd-force1.de';
+const ORIGIN = 'https://nerd-force1.com';
 const src = readFileSync(new URL('../src/app/core/locales.ts', import.meta.url), 'utf8');
 
 const list = (name) => {

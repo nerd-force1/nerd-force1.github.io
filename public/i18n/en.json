@@ -269,7 +269,7 @@
   },
   "team": {
     "label": "Team",
-    "title": "Three people who build it themselves.",
+    "title": "Four people who build it themselves.",
     "sub": "No sales layer: the people listed here build and run your platform.",
     "managingDirector": "Managing Director",
     "members": {
@@ -284,6 +284,10 @@
       "philipp": {
         "role": "CTO · Chief Technology Officer",
         "blurb": "Head of Automation and Deployment. Owns servers, deployment and the automation of the infrastructure our shops and platforms run on."
+      },
+      "dominic": {
+        "role": "Security Engineer",
+        "blurb": "IT security engineer focused on embedded security for decentralised systems. Builds secure backends and data pipelines and researched 5G traffic analysis at Ruhr University Bochum."
       }
     }
   },

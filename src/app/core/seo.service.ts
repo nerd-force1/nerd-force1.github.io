@@ -1,12 +1,13 @@
 import { DOCUMENT } from '@angular/common';
 import { inject, Injectable } from '@angular/core';
+import { ORGANIZATION_ID, ORIGIN, organizationNode, relatedNodes, WEBSITE_ID, websiteNode } from '../data/organization.data';
 import { DEFAULT_LOCALE, LOCALES, localeOfPath, swapLocale } from './locales';
 
-/** Absolute origin for canonical/alternate URLs. Must match the deployed host. */
-const ORIGIN = 'https://nerd-force1.de';
+const JSONLD_ID = 'nf-site-jsonld';
 
 /**
- * Emits <html lang>, a per-locale canonical, and hreflang alternates.
+ * Emits <html lang>, a per-locale canonical, hreflang alternates, and the site-wide
+ * JSON-LD graph (Organization, WebSite, WebPage).
  *
  * Without hreflang, /de/services and /en/services read to Google as duplicates
  * rather than translations — which is the exact failure #58 exists to avoid, so
@@ -33,6 +34,8 @@ export class SeoService {
       this.setLink('alternate', l, `${ORIGIN}${swapLocale(path, l)}`);
     }
     this.setLink('alternate', 'x-default', `${ORIGIN}${swapLocale(path, DEFAULT_LOCALE)}`);
+
+    this.setJsonLd(path, locale);
   }
 
   private setLink(rel: string, hreflang: string | null, href: string): void {
@@ -41,5 +44,29 @@ export class SeoService {
     if (hreflang) link.setAttribute('hreflang', hreflang);
     link.setAttribute('href', href);
     this.doc.head.appendChild(link);
+  }
+
+  private setJsonLd(path: string, locale: string): void {
+    this.doc.getElementById(JSONLD_ID)?.remove();
+    const script = this.doc.createElement('script');
+    script.id = JSONLD_ID;
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify({
+      '@context': 'https://schema.org',
+      '@graph': [
+        organizationNode(),
+        websiteNode(),
+        {
+          '@type': 'WebPage',
+          '@id': `${ORIGIN}${path}`,
+          url: `${ORIGIN}${path}`,
+          inLanguage: locale,
+          isPartOf: { '@id': WEBSITE_ID },
+          about: { '@id': ORGANIZATION_ID },
+        },
+        ...relatedNodes(),
+      ],
+    });
+    this.doc.head.appendChild(script);
   }
 }

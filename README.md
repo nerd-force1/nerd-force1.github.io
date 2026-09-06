@@ -1,6 +1,6 @@
 # Nerd-Force1 Website
 
-Static company website for [Nerd-Force1](https://nerd-force1.de), served from GitHub Pages.
+Static company website for [Nerd-Force1](https://nerd-force1.com), served from GitHub Pages.
 
 Derived from the frontend of `AI-Gruppe/nf1_website_sw` (Angular 22 SSR + FastAPI). Here
 the site is **prerendered at build time** — no server, no database.

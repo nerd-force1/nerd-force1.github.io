@@ -5,6 +5,7 @@ import { SectionHeading } from '../../components/marketing/section-heading/secti
 import { ValueProps } from '../../components/marketing/value-props/value-props';
 import { CtaBand } from '../../components/marketing/cta-band/cta-band';
 import { TeamGrid } from '../../components/marketing/team-grid/team-grid';
+import { organizationNode } from '../../data/organization.data';
 import { ORGANIZATION_ID, TEAM } from '../../data/team.data';
 
 const JSONLD_ID = 'nf-team-jsonld';
@@ -49,23 +50,16 @@ export class UeberUnsPage implements OnDestroy {
 }
 
 /**
- * Organization + one Person per team member, each under the canonical `@id` that the
- * other AI-Gruppe sites already use for that person (see team.data.ts).
+ * Organization (with `employee`) + one Person per team member, each under the canonical
+ * `@id` that the person's own site or auto-intern.de already uses (see team.data.ts).
+ * The site-wide graph from SeoService carries the same Organization `@id`; consumers
+ * merge nodes by `@id`, so repeating it here with `employee` is additive, not conflicting.
  */
 function teamGraph(): object {
   return {
     '@context': 'https://schema.org',
     '@graph': [
-      {
-        '@type': 'Organization',
-        '@id': ORGANIZATION_ID,
-        name: 'nerd_force1 UG',
-        legalName: 'nerd_force1 UG (haftungsbeschränkt)',
-        url: 'https://nerd-force1.com/',
-        brand: { '@id': 'https://gruppe.ai/#brand' },
-        employee: TEAM.map((m) => ({ '@id': m.id })),
-        sameAs: ['https://nerd-force1.de/', 'https://www.linkedin.com/company/nerd-force1/'],
-      },
+      { ...organizationNode(), employee: TEAM.map((m) => ({ '@id': m.id })) },
       ...TEAM.map((m) => ({
         '@type': 'Person',
         '@id': m.id,

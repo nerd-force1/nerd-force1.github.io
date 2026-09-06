@@ -4,8 +4,10 @@
  * identifier per person across the AI-Gruppe sites, never a second one minted here.
  * Display strings (role labels, blurbs) live in i18n under `team.members.<key>`.
  */
+import { ORGANIZATION_ID } from './organization.data';
+export { ORGANIZATION_ID };
 export interface TeamMember {
-  readonly key: 'odin' | 'stephan' | 'philipp';
+  readonly key: 'odin' | 'stephan' | 'philipp' | 'dominic';
   readonly id: string;
   readonly name: string;
   readonly givenName: string;
@@ -17,8 +19,6 @@ export interface TeamMember {
   readonly url: string;
   readonly links: ReadonlyArray<{ readonly label: string; readonly href: string }>;
 }
-
-export const ORGANIZATION_ID = 'https://www.nerd-force1.de/#organization';
 
 export const TEAM: readonly TeamMember[] = [
   {
@@ -60,6 +60,20 @@ export const TEAM: readonly TeamMember[] = [
     links: [
       { label: 'LinkedIn', href: 'https://www.linkedin.com/in/philipp-lehmann-17995521b/' },
       { label: 'GitHub', href: 'https://github.com/philipptheserver' },
+    ],
+  },
+  {
+    key: 'dominic',
+    id: 'https://dobe-1.dev/#person',
+    name: 'Dominic Becker',
+    givenName: 'Dominic',
+    familyName: 'Becker',
+    jobTitle: 'Security Engineer',
+    url: 'https://dobe-1.dev/',
+    links: [
+      { label: 'dobe-1.dev', href: 'https://dobe-1.dev/' },
+      { label: 'GitHub', href: 'https://github.com/dobe-1' },
+      { label: 'LinkedIn', href: 'https://www.linkedin.com/in/dominic-b-a2b721231' },
     ],
   },
 ];

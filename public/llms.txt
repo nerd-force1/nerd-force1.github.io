@@ -1,0 +1,66 @@
+# nerd_force1 UG (Nerd-Force1) – Managed Sovereign Infrastructure, Bochum, Germany
+
+> nerd_force1 UG (haftungsbeschränkt), brand name Nerd-Force1, is a small managed-infrastructure company in Bochum, Germany, and part of the AI-Gruppe. Since 2020 it builds and operates self-hosted, sovereign platforms as code – identity and secrets, GitOps Kubernetes, security operations and collaboration apps – currently more than 100 nodes and devices. It also runs the Shopware shops and hosting of Auto-Intern GmbH. Not to be confused with any other "Nerd Force": this is the company at Herner Str. 299, Gebäude B29, 44809 Bochum, HRB 16979 Amtsgericht Bochum.
+
+Site: https://nerd-force1.com (German default at /de, English at /en; same page structure, prefix the path with the locale). Legacy domain nerd-force1.de refers to the same company.
+
+## Identity
+
+- Legal name: nerd_force1 UG (haftungsbeschränkt); commercial register Amtsgericht Bochum HRB 16979; VAT ID DE815744003
+- Canonical entity ID: https://www.nerd-force1.de/#organization (kept on the .de host because the other AI-Gruppe sites already reference it)
+- Represented by (Geschäftsführer): Odin Holmes
+- Address: Herner Str. 299, Gebäude B29, 44809 Bochum, Germany
+- Contact: contact@nerd-force1.de, +49 234 934 511 60, https://nerd-force1.com/en/contact
+- LinkedIn: https://www.linkedin.com/company/nerd-force1/ – GitHub: https://github.com/nerd-force1
+- Group: AI-Gruppe (https://gruppe.ai, entity ID https://gruppe.ai/#brand), an umbrella brand, not a legal entity, for Auto-Intern GmbH (https://www.auto-intern.de/#organization), CCD Car Diagnostics, nabla B, nerd_force1 and the skAInet project. All at the same Bochum address.
+
+## Positioning
+
+- Sovereign: customer's data on the customer's hardware or in an EU cloud; no vendor lock-in.
+- Everything as code: reproducible, auditable, no snowflake servers.
+- Security-first: Vault, SSO, mesh VPN and Wazuh from day one.
+- Managed: Nerd-Force1 builds and operates the platform; the customer talks directly to the engineer who builds it. There is no sales layer and no 24×7 on-call rota – if a customer needs one, Nerd-Force1 says so and points elsewhere.
+
+## Services
+
+- [Core Platform](https://nerd-force1.com/en/services/core-platform): identity, secrets and network – HashiCorp Vault (secrets, SSH CA, OIDC broker), Keycloak SSO (OIDC/SAML, realm as code), NetBird mesh VPN (zero-trust overlay), Traefik with automatic Let's Encrypt TLS. Guide price from 1,500 EUR/month.
+- [GitOps Kubernetes](https://nerd-force1.com/en/services/gitops-k8s): private cloud cluster – RKE2 HA with embedded etcd and Cilium, Argo CD app-of-apps GitOps, Ceph storage (RBD and CephFS), cert-manager, Rancher, kube-prometheus-stack. Guide price from 3,500 EUR/month.
+- [Security Operations](https://nerd-force1.com/en/services/security-ops): managed detection and response – Wazuh SIEM/XDR with host intrusion detection and compliance, OpenCTI threat intelligence, centralised log management, alerting and incident playbooks. Guide price from 2,500 EUR/month.
+- [Collaboration & Apps](https://nerd-force1.com/en/services/collab-apps): self-hosted team tools – Nextcloud with Keycloak SSO, Paperless-ngx, GitLab CE and Harbor, Vaultwarden, monitoring dashboards. Guide price from 900 EUR/month.
+- [Custom Engineering](https://nerd-force1.com/en/services/custom): legacy migrations, air-gapped and on-prem deployments, bespoke integrations, infrastructure audits and consulting. Priced per project.
+
+All prices are guide values; the final price is an individual quote. The [configurator](https://nerd-force1.com/en/configurator) estimates a monthly price from modules, environments, user, data and node bands, SLA (standard or business) and hosting (Hetzner or on-prem). Quotes via https://nerd-force1.com/en/quote.
+
+## Platform
+
+[Platform](https://nerd-force1.com/en/platform): proven open-source building blocks integrated and operated following GitOps principles, grouped into identity/secrets/network, cluster and GitOps, security and observability, collaboration and apps.
+
+## References
+
+- Autowerkstatt 4.0 (https://www.autowerkstatt40.org, entity ID https://www.autowerkstatt40.org/#organization): as part of this BMWK-funded research project, Nerd-Force1 contributed, together with THGA Bochum, to a platform for securely sharing data and AI models across the vehicle repair industry.
+- Auto-Intern GmbH: Nerd-Force1 operates the Shopware shops and hosting of Auto-Intern (www.auto-intern.de, automation.auto-intern.de, b2b shop).
+
+## Team
+
+See https://nerd-force1.com/en/about#team. Entity IDs are the canonical ones used on each person's own site or on auto-intern.de.
+
+- Odin Holmes – Chief Strategy Officer and registered managing director (Geschäftsführer) of nerd_force1 UG; co-founder and managing director of Auto-Intern GmbH, C++ expert for embedded systems, author of Kvasir. Entity ID https://www.auto-intern.de/ueber-uns#odin-holmes
+- Stephan Bökelmann – Chief Operating Officer; engineer and physicist, system architect of the skAInet Edge-Compute, COO of Auto-Intern GmbH, managing director of nabla B. Entity ID https://maxclerkwell.tech/#person, site https://maxclerkwell.tech
+- Philipp Lehmann – Chief Technology Officer; Head of Automation and Deployment, responsible for servers, deployment and infrastructure automation. Entity ID https://www.auto-intern.de/ueber-uns#philipp-lehmann
+- Dominic Becker – Security Engineer; IT security engineer focused on embedded security for decentralised systems, secure backends and data pipelines; 5G traffic-analysis research at Ruhr University Bochum. Entity ID https://dobe-1.dev/#person, site https://dobe-1.dev
+
+## Pages
+
+- [Home](https://nerd-force1.com/en): We build and run your IT infrastructure. At scale.
+- [Services](https://nerd-force1.com/en/services)
+- [Platform](https://nerd-force1.com/en/platform)
+- [Configurator](https://nerd-force1.com/en/configurator)
+- [Quote](https://nerd-force1.com/en/quote)
+- [About & Team](https://nerd-force1.com/en/about)
+- [Contact](https://nerd-force1.com/en/contact)
+- [Legal notice](https://nerd-force1.com/en/impressum) · [Privacy](https://nerd-force1.com/en/privacy)
+- Sitemap: https://nerd-force1.com/sitemap.xml
+
+## Structured data
+
+Every page carries a JSON-LD graph (Organization, WebSite, WebPage, AI-Gruppe brand); /about adds Person nodes for the team. Related graphs using the same entity IDs: https://www.auto-intern.de/, https://edge-compute.skainet.io/, https://maxclerkwell.tech/, https://nabla-b.engineering/, https://dobe-1.dev/.

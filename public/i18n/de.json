@@ -269,7 +269,7 @@
   },
   "team": {
     "label": "Team",
-    "title": "Drei Leute, die selbst bauen.",
+    "title": "Vier Leute, die selbst bauen.",
     "sub": "Keine Vertriebsebene: Wer hier steht, baut und betreibt deine Plattform auch.",
     "managingDirector": "Geschäftsführer",
     "members": {
@@ -284,6 +284,10 @@
       "philipp": {
         "role": "CTO · Chief Technology Officer",
         "blurb": "Head of Automation and Deployment. Verantwortet Server, Deployment und die Automatisierung der Infrastruktur, auf der unsere Shops und Plattformen laufen."
+      },
+      "dominic": {
+        "role": "Security Engineer",
+        "blurb": "IT-Security-Ingenieur mit Schwerpunkt Embedded Security für dezentrale Systeme. Baut sichere Backends und Datenpipelines und hat an der RUB zu Traffic-Analyse in 5G-Netzen geforscht."
       }
     }
   },
