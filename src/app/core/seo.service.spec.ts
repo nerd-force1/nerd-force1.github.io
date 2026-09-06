@@ -57,4 +57,21 @@ describe('SeoService', () => {
     expect(page?.['inLanguage']).toBe('en');
     expect(graph.find((n) => n['@type'] === 'Organization')?.['@id']).toBe('https://www.nerd-force1.de/#organization');
   });
+
+  it('lists the five services under the Organization and points a detail page at its Service', () => {
+    seo.update('/en/services/gitops-k8s');
+    const graph = JSON.parse(doc.getElementById('nf-site-jsonld')?.textContent ?? '{}')['@graph'] as Array<Record<string, any>>;
+    const services = graph.filter((n) => n['@type'] === 'Service');
+    expect(services.length).toBe(5);
+    const k8s = services.find((n) => n['@id'] === 'https://nerd-force1.com/#service-gitops-k8s');
+    expect(k8s?.['offers']?.['priceSpecification']?.['price']).toBe(3500);
+    expect(k8s?.['provider']?.['@id']).toBe('https://www.nerd-force1.de/#organization');
+    expect(services.find((n) => n['@id'].endsWith('#service-custom'))?.['offers']).toBeUndefined();
+    const org = graph.find((n) => n['@type'] === 'Organization' && n['@id'] === 'https://www.nerd-force1.de/#organization');
+    expect(org?.['hasOfferCatalog']?.['itemListElement']?.length).toBe(5);
+    expect(graph.find((n) => n['@type'] === 'WebPage')?.['mainEntity']?.['@id']).toBe('https://nerd-force1.com/#service-gitops-k8s');
+    seo.update('/de/about');
+    const about = JSON.parse(doc.getElementById('nf-site-jsonld')?.textContent ?? '{}')['@graph'] as Array<Record<string, any>>;
+    expect(about.find((n) => n['@type'] === 'WebPage')?.['mainEntity']).toBeUndefined();
+  });
 });

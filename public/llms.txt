@@ -63,4 +63,4 @@ See https://nerd-force1.com/en/about#team. Entity IDs are the canonical ones use
 
 ## Structured data
 
-Every page carries a JSON-LD graph (Organization, WebSite, WebPage, AI-Gruppe brand); /about adds Person nodes for the team. Related graphs using the same entity IDs: https://www.auto-intern.de/, https://edge-compute.skainet.io/, https://maxclerkwell.tech/, https://nabla-b.engineering/, https://dobe-1.dev/.
+Every page carries a JSON-LD graph (Organization with OfferCatalog, the five Service entities with IDs https://nerd-force1.com/#service-<slug> for core-platform, gitops-k8s, security-ops, collab-apps and custom, WebSite, WebPage, AI-Gruppe brand); /about adds Person nodes for the team. Related graphs using the same entity IDs: https://www.auto-intern.de/, https://edge-compute.skainet.io/, https://maxclerkwell.tech/, https://nabla-b.engineering/, https://dobe-1.dev/.

@@ -1,13 +1,16 @@
 import { DOCUMENT } from '@angular/common';
 import { inject, Injectable } from '@angular/core';
 import { ORGANIZATION_ID, ORIGIN, organizationNode, relatedNodes, WEBSITE_ID, websiteNode } from '../data/organization.data';
-import { DEFAULT_LOCALE, LOCALES, localeOfPath, swapLocale } from './locales';
+import { offerCatalog, serviceId, serviceNodes } from '../data/services.data';
+import { isPillarSlug } from '../data/pillars.data';
+import { DEFAULT_LOCALE, LOCALES, Locale, localeOfPath, swapLocale } from './locales';
 
 const JSONLD_ID = 'nf-site-jsonld';
 
 /**
  * Emits <html lang>, a per-locale canonical, hreflang alternates, and the site-wide
- * JSON-LD graph (Organization, WebSite, WebPage).
+ * JSON-LD graph (Organization with its OfferCatalog, the five Services, WebSite, WebPage;
+ * a service detail page's WebPage points at its Service via mainEntity).
  *
  * Without hreflang, /de/services and /en/services read to Google as duplicates
  * rather than translations — which is the exact failure #58 exists to avoid, so
@@ -19,7 +22,7 @@ export class SeoService {
 
   update(url: string): void {
     const path = url.split('?')[0].split('#')[0];
-    const locale = localeOfPath(path) ?? DEFAULT_LOCALE;
+    const locale: Locale = localeOfPath(path) ?? DEFAULT_LOCALE;
 
     this.doc.documentElement.lang = locale;
 
@@ -46,7 +49,9 @@ export class SeoService {
     this.doc.head.appendChild(link);
   }
 
-  private setJsonLd(path: string, locale: string): void {
+  private setJsonLd(path: string, locale: Locale): void {
+    const pillar = path.match(/^\/(?:de|en)\/services\/([^/]+)$/)?.[1];
+    const mainEntity = pillar && isPillarSlug(pillar) ? { mainEntity: { '@id': serviceId(pillar) } } : {};
     this.doc.getElementById(JSONLD_ID)?.remove();
     const script = this.doc.createElement('script');
     script.id = JSONLD_ID;
@@ -54,8 +59,9 @@ export class SeoService {
     script.text = JSON.stringify({
       '@context': 'https://schema.org',
       '@graph': [
-        organizationNode(),
+        { ...organizationNode(), hasOfferCatalog: offerCatalog() },
         websiteNode(),
+        ...serviceNodes(locale),
         {
           '@type': 'WebPage',
           '@id': `${ORIGIN}${path}`,
@@ -63,6 +69,7 @@ export class SeoService {
           inLanguage: locale,
           isPartOf: { '@id': WEBSITE_ID },
           about: { '@id': ORGANIZATION_ID },
+          ...mainEntity,
         },
         ...relatedNodes(),
       ],

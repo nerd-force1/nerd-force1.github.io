@@ -23,3 +23,4 @@ export const PILLARS: Pillar[] = (Object.keys(ICONS) as PillarSlug[]).map(slug =
 }));
 
 export const pillarBySlug = (slug: string): Pillar | undefined => PILLARS.find(p => p.slug === slug);
+export const isPillarSlug = (slug: string): slug is PillarSlug => pillarBySlug(slug) !== undefined;
