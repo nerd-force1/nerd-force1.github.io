@@ -1,0 +1,29 @@
+<footer class="border-t border-hairline bg-bg-void">
+  <div class="mx-auto grid max-w-7xl gap-8 px-6 py-12 md:grid-cols-4">
+    <div>
+      <!-- The full lockup, tagline included: unlike the navbar there is vertical room, and
+           "use the force." is the brand's own line rather than a restatement of the
+           positioning sentence below it. -->
+      <img src="brand/nf1-logo.png" width="1214" height="216"
+           class="h-10 w-auto" [alt]="'brand.logoAlt' | translate">
+      <p class="mt-3 text-sm text-text-muted">{{ 'footer.tagline' | translate }}</p>
+    </div>
+    <div class="text-sm">
+      <p class="mono-label">{{ 'footer.company' | translate }}</p>
+      <a [routerLink]="'/about' | loc" class="mt-2 block text-text-secondary focus-ring">{{ 'nav.about' | translate }}</a>
+      <a [routerLink]="'/contact' | loc" class="block text-text-secondary focus-ring">{{ 'nav.contact' | translate }}</a>
+    </div>
+    <div class="text-sm">
+      <p class="mono-label">{{ 'footer.legal' | translate }}</p>
+      <a [routerLink]="'/impressum' | loc" class="mt-2 block text-text-secondary focus-ring">{{ 'footer.imprint' | translate }}</a>
+      <a [routerLink]="'/privacy' | loc" class="block text-text-secondary focus-ring">{{ 'footer.privacy' | translate }}</a>
+    </div>
+    <div>
+      <div class="flex items-start gap-2 text-sm text-text-secondary">
+        <span class="status-dot mt-1"></span> {{ 'footer.status' | translate }}
+      </div>
+      <div class="mt-3"><nf-lang-switcher /></div>
+    </div>
+  </div>
+  <div class="border-t border-hairline px-6 py-4 text-center text-xs text-text-muted">{{ 'footer.copyright' | translate:{ year } }}</div>
+</footer>

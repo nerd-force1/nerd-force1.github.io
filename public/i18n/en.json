@@ -1,0 +1,389 @@
+{
+  "brand": {
+    "homeAlt": "Nerd-Force1 – home",
+    "logoAlt": "Nerd-Force1 – use the force."
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "back": "Back",
+    "next": "Next",
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "close": "Close",
+    "learnMore": "Learn more",
+    "contactUs": "Contact us",
+    "bookConsultation": "Book consultation"
+  },
+  "nav": {
+    "home": "Home",
+    "leistungen": "Services",
+    "loesungen": "Solutions",
+    "beratung": "Consulting",
+    "demo": "Demo",
+    "services": "Services",
+    "platform": "Platform",
+    "configurator": "Configurator",
+    "about": "About",
+    "contact": "Contact",
+    "book": "Request a call",
+    "menu": "Menu",
+    "lang": {
+      "de": "DE",
+      "en": "EN"
+    }
+  },
+  "consent": {
+    "text": "We only use essential cookies.",
+    "accept": "Accept",
+    "decline": "Decline"
+  },
+  "page": {
+    "home": { "title": "We build and run your IT infrastructure." },
+    "services": { "title": "Services" },
+    "serviceDetail": { "title": "Service" },
+    "platform": { "title": "Platform" },
+    "configurator": { "title": "Infrastructure Configurator" },
+    "about": { "title": "About us" },
+    "contact": { "title": "Contact" }
+  },
+  "hero": {
+    "headline": "Infrastructure that thinks ahead.",
+    "subheadline": "Kubernetes. GitOps. WASM. Tailored for your business.",
+    "cta": {
+      "primary": "Book consultation",
+      "secondary": "Experience demo"
+    }
+  },
+  "techHoneycomb": {
+    "title": "Our Stack",
+    "subtitle": "Cutting-edge technologies, proven in production."
+  },
+  "valueProposition": {
+    "title": "Why Nerd-Force1?",
+    "items": {
+      "speed": {
+        "title": "Speed",
+        "body": "From idea to production in days, not months."
+      },
+      "reliability": {
+        "title": "Reliability",
+        "body": "99.9% uptime through GitOps and automated failover strategies."
+      },
+      "expertise": {
+        "title": "Expertise",
+        "body": "Senior engineers with years of experience in critical infrastructure."
+      }
+    }
+  },
+  "loesungen": {
+    "title": "Solutions for every need",
+    "audiences": {
+      "startup": "Startup",
+      "mittelstand": "SME",
+      "enterprise": "Enterprise"
+    },
+    "startup": {
+      "headline": "Scale faster than the competition",
+      "subheadline": "From first idea to production-ready infrastructure — in weeks, not months.",
+      "cta": "Book a free first call",
+      "features": {
+        "cicd": {
+          "title": "CI/CD from day one",
+          "body": "Automated pipelines with GitLab CI and ArgoCD. Your code ships to production safely every day."
+        },
+        "kubernetes": {
+          "title": "Managed Kubernetes",
+          "body": "RKE2 clusters with auto-scaling and zero-downtime deployments, operated and monitored by us."
+        },
+        "cost": {
+          "title": "Cost-optimised scaling",
+          "body": "Resource-efficient architectures and FinOps strategies to keep cloud costs in line with your growth."
+        }
+      }
+    },
+    "mittelstand": {
+      "headline": "Reliability you can count on",
+      "subheadline": "Proven infrastructure for organisations that can't afford unplanned downtime.",
+      "cta": "Schedule a consultation",
+      "features": {
+        "sla": {
+          "title": "99.9 % uptime guaranteed",
+          "body": "GitOps-driven deployments with automated rollbacks and active failover mechanisms."
+        },
+        "integration": {
+          "title": "Seamless system integration",
+          "body": "Connecting on-premise systems, ERP, and modern cloud services in a unified platform."
+        },
+        "compliance": {
+          "title": "GDPR & compliance",
+          "body": "Legally compliant architectures, data encryption, and full audit logs for regulated industries."
+        }
+      }
+    },
+    "enterprise": {
+      "headline": "Enterprise-grade infrastructure",
+      "subheadline": "Multi-cluster setups, tailored security, and dedicated senior support for demanding organisations.",
+      "cta": "Request enterprise package",
+      "features": {
+        "multicluster": {
+          "title": "Multi-cluster & multi-region",
+          "body": "Highly available Kubernetes deployments across multiple data centres and regions — no single point of failure."
+        },
+        "security": {
+          "title": "Security hardening & audits",
+          "body": "BSI-compliant hardening, zero-trust networks, and regular penetration tests by certified engineers."
+        },
+        "support": {
+          "title": "Dedicated 24/7 support",
+          "body": "Direct access to senior engineers, SLA-backed response times, and proactive around-the-clock monitoring."
+        }
+      }
+    }
+  },
+  "leistungen": {
+    "label": "Services",
+    "title": "What we build and run for you",
+    "sub": "From the base platform to managed security – modular and combinable.",
+    "back": "All services",
+    "includes": "What's included",
+    "notFound": "This service doesn't exist."
+  },
+  "beratung": {
+    "title": "Book Consultation",
+    "subtitle": "30 minutes, free, no obligation.",
+    "form": {
+      "name": "Your name",
+      "email": "Email address",
+      "company": "Company",
+      "message": "Your request"
+    }
+  },
+  "stackBuilder": {
+    "title": "Stack Builder",
+    "subtitle": "Compose your individual technology stack.",
+    "generate": "Generate stack",
+    "reset": "Reset"
+  },
+  "terminalDemo": {
+    "title": "Live Demo",
+    "subtitle": "Experience our infrastructure in real time.",
+    "start": "Start demo",
+    "stop": "Stop demo"
+  },
+  "footer": {
+    "company": "Company",
+    "tagline": "We build and run your IT infrastructure. At scale.",
+    "legal": "Legal",
+    "imprint": "Legal notice",
+    "privacy": "Privacy policy",
+    "status": "All systems operational",
+    "links": {
+      "impressum": "Legal notice",
+      "datenschutz": "Privacy policy",
+      "kontakt": "Contact"
+    },
+    "copyright": "© {{year}} Nerd-Force1. All rights reserved."
+  },
+  "impressum": {
+    "label": "Legal",
+    "title": "Legal Notice",
+    "updated": "This is a courtesy translation; the German version is legally binding.",
+    "sections": [
+      { "title": "Information pursuant to § 5 DDG", "body": "nerd_force1 UG\nHerner Str. 299\nGebäude B29\n44809 Bochum\nGermany" },
+      { "title": "Represented by", "body": "Odin Holmes" },
+      { "title": "Contact", "body": "Phone: 0234 934 511 60\nE-mail: contact@nerd-force1.de" },
+      { "title": "Register entry", "body": "Entry in the commercial register.\nRegistering court: Amtsgericht Bochum\nRegistration number: HRB 16979" },
+      { "title": "VAT ID", "body": "Value added tax identification number pursuant to § 27a of the German VAT Act:\nDE815744003" },
+      { "title": "Responsible for content pursuant to § 18 (2) MStV", "body": "Odin Holmes\nnerd_force1 UG\nHerner Str. 299\nGebäude B29\n44809 Bochum" },
+      { "title": "Dispute resolution", "body": "The European Commission provides a platform for online dispute resolution (ODR): https://ec.europa.eu/consumers/odr/. We are neither obliged nor willing to participate in a dispute resolution procedure before a consumer arbitration board." }
+    ]
+  },
+  "datenschutz": {
+    "label": "Legal",
+    "title": "Privacy Policy",
+    "updated": "This is a courtesy translation; the German version is legally binding. · Last updated: 14 July 2026",
+    "sections": [
+      { "title": "1. Controller", "body": "The controller responsible for data processing on this website is:\nnerd_force1 UG\nHerner Str. 299\nGebäude B29\n44809 Bochum\nE-mail: contact@nerd-force1.de" },
+      { "title": "2. Hosting", "body": "This website runs on our own, self-managed infrastructure within the European Union. No content is loaded from external content delivery networks. Fonts are served locally from our own server – there is no transmission to third parties (e.g. Google Fonts)." },
+      { "title": "3. Server log files", "body": "When the website is accessed, technically necessary access data (including IP address, date and time, requested resource, user agent) is temporarily processed in server logs. The legal basis is Art. 6 (1) (f) GDPR (legitimate interest in operation and security). The data is deleted after a short period." },
+      { "title": "4. Contact and enquiry forms", "body": "You can send us enquiries via the \"Request a quote\" form. We process the data you provide (including name, company, e-mail address, phone number, message and the configuration selected in the configurator). The purpose is to handle your enquiry and to initiate a contractual relationship. The legal basis is Art. 6 (1) (b) GDPR (pre-contractual measures) or Art. 6 (1) (f) GDPR. The data is deleted as soon as it is no longer required and no statutory retention obligations prevent this.\n\nThe contact page itself does not process a form; it offers you the option of contacting us directly by e-mail (mailto link). In that case we process the details you send solely to answer your enquiry, on the basis of Art. 6 (1) (b) or (f) GDPR." },
+      { "title": "5. E-mail delivery", "body": "For sending e-mails (notifications and confirmations in connection with enquiries) we use the service provider Mailgun (Sinch) as a processor pursuant to Art. 28 GDPR. The data required for delivery (including e-mail address, name, content of the message) is processed. A data processing agreement is in place. Where data is transferred to a third country, this is safeguarded by appropriate guarantees (EU standard contractual clauses)." },
+      { "title": "6. Cookies and consent", "body": "We use exclusively technically necessary cookies or comparable storage techniques that are required to operate the site (e.g. storing your cookie decision and language setting). No tracking, analytics or marketing cookies are set. The legal basis is § 25 (2) TDDDG and Art. 6 (1) (f) GDPR." },
+      { "title": "7. No analytics or tracking services", "body": "This website uses no web analytics, tracking or advertising services and embeds no social media plugins." },
+      { "title": "8. Your rights", "body": "You have the right to access (Art. 15), rectification (Art. 16), erasure (Art. 17), restriction of processing (Art. 18), data portability (Art. 20) as well as a right to object (Art. 21 GDPR). An informal message to contact@nerd-force1.de is sufficient to exercise these rights." },
+      { "title": "9. Right to lodge a complaint", "body": "You have the right to lodge a complaint with a data protection supervisory authority regarding the processing of your personal data.\nCompetent supervisory authority: Landesbeauftragte für Datenschutz und Informationsfreiheit Nordrhein-Westfalen" },
+      { "title": "10. Updates", "body": "This privacy policy is amended as necessary to reflect changes in the legal situation or in our processing activities." }
+    ]
+  },
+  "cta": {
+    "title": "Ready to hand over your infrastructure – not control?",
+    "sub": "Assemble your stack or talk to us directly.",
+    "configure": "Configure infrastructure",
+    "book": "Request a call",
+    "quote": "Request a quote",
+    "learnMore": "Learn more"
+  },
+  "home": {
+    "badge": "Managed Infrastructure · Made in EU",
+    "hero": {
+      "title": "We build and run your IT infrastructure.",
+      "accent": "At scale.",
+      "sub": "Sovereign, self-hosted platforms instead of public-cloud dependency – from identity and secrets through Kubernetes to security operations. Everything as code, everything managed.",
+      "services": "View services"
+    },
+    "stats": {
+      "a": { "value": "6 years", "label": "in operation" },
+      "b": { "value": "100+", "label": "nodes & devices" },
+      "c": { "value": "EU", "label": "data residency & sovereignty" }
+    }
+  },
+  "aw40": {
+    "label": "Reference",
+    "title": "Autowerkstatt 4.0",
+    "body": "As part of the BMWK-funded Autowerkstatt 4.0 project, we contributed — in collaboration with THGA Bochum — to a platform for securely sharing data and AI models across the vehicle repair industry.",
+    "context": "Autowerkstatt 4.0 is a research project of the German Federal Ministry for Economic Affairs and Climate Action. Its consortium includes DEKRA, DFKI, Hochschule Osnabrück, Vergölst and THGA Bochum, among others."
+  },
+  "values": {
+    "sovereign": { "title": "Sovereign", "desc": "Your data, your hardware or EU cloud. No vendor lock-in." },
+    "code": { "title": "Everything as code", "desc": "Reproducible and auditable. No snowflake servers." },
+    "security": { "title": "Security-first", "desc": "Vault, SSO, mesh VPN and Wazuh from day one." },
+    "managed": { "title": "Managed", "desc": "We build and operate your platform – as code, reproducible." }
+  },
+  "plattform": {
+    "label": "Platform",
+    "title": "The technology behind the service",
+    "sub": "Proven open-source building blocks, integrated and operated following GitOps principles.",
+    "groups": {
+      "identity": "Identity, secrets & network",
+      "cluster": "Cluster & GitOps",
+      "security": "Security & observability",
+      "apps": "Collaboration & apps"
+    }
+  },
+  "about": {
+    "label": "About",
+    "title": "Small, specialised, six years in operation.",
+    "body1": "nerd_force1 is a small sovereign-infrastructure specialist based in Bochum, Germany. For six years we have built and operated self-hosted platforms — currently more than 100 nodes and devices. No sales layer, no account manager: you talk directly to the person who builds your infrastructure.",
+    "body2": "We work heavily automated, everything as code. That is why a very small team can run a platform this size — and why we are equally direct about what we don't offer: there is no 24×7 on-call rota. If you need one, we'll say so and point you elsewhere."
+  },
+  "kontakt": {
+    "label": "Contact",
+    "title": "Let's talk",
+    "sub": "Whether it's a concrete project or a first idea — we'll get back to you quickly.",
+    "email": "E-mail",
+    "preferredTime": "Preferred time (optional, e.g. \"Mon–Fri mornings\")",
+    "submit": "Send message",
+    "quotePrompt": "Already know what you need? Request a no-obligation quote."
+  },
+  "pillars": {
+    "core-platform": {
+      "title": "Core Platform",
+      "oneLiner": "Identity, secrets and network – the foundation everything else runs on securely.",
+      "capabilities": {
+        "0": "HashiCorp Vault – secrets, SSH CA and OIDC broker",
+        "1": "Keycloak SSO – OIDC/SAML, realm as code",
+        "2": "NetBird mesh VPN – zero-trust overlay",
+        "3": "Traefik – reverse proxy with automatic Let's Encrypt TLS"
+      }
+    },
+    "gitops-k8s": {
+      "title": "GitOps Kubernetes",
+      "oneLiner": "Your private cloud cluster – declarative, self-healing, fully as code.",
+      "capabilities": {
+        "0": "RKE2 HA cluster with embedded etcd and Cilium",
+        "1": "Argo CD – app-of-apps GitOps",
+        "2": "Ceph storage – RBD & CephFS",
+        "3": "cert-manager, Rancher & kube-prometheus-stack"
+      }
+    },
+    "security-ops": {
+      "title": "Security Operations",
+      "oneLiner": "Detect, understand, respond – managed detection & response for your infrastructure.",
+      "capabilities": {
+        "0": "Wazuh – SIEM/XDR, host intrusion detection & compliance",
+        "1": "OpenCTI – threat intelligence platform",
+        "2": "Centralised log management",
+        "3": "Alerting & incident playbooks"
+      }
+    },
+    "collab-apps": {
+      "title": "Collaboration & Apps",
+      "oneLiner": "Your team's tools – self-hosted, integrated, under your control.",
+      "capabilities": {
+        "0": "Nextcloud – files with Keycloak SSO",
+        "1": "Paperless-ngx – document management",
+        "2": "GitLab CE & Harbor – code, CI and registry",
+        "3": "Vaultwarden & monitoring dashboards"
+      }
+    },
+    "custom": {
+      "title": "Custom Engineering",
+      "oneLiner": "Your setup is special? We build it. From migration to bespoke integration.",
+      "capabilities": {
+        "0": "Legacy migrations",
+        "1": "Air-gapped & on-prem deployments",
+        "2": "Bespoke integrations",
+        "3": "Infrastructure audits & consulting"
+      }
+    }
+  },
+  "errors": {
+    "notFound": {
+      "title": "404 – Page not found",
+      "body": "The page you are looking for does not exist.",
+      "cta": "Back to home"
+    },
+    "generic": "Something went wrong. Please try again."
+  },
+  "konfigurator": {
+    "label": "Configurator",
+    "title": "Build your infrastructure",
+    "sub": "Pick the building blocks and the scale – we build and run them for you.",
+    "step1": "1 · Choose building blocks",
+    "step2": "2 · Scale",
+    "from": "from",
+    "letsTalk": "On request",
+    "estimate": "Estimated cost",
+    "plusCustom": "+ individual custom package",
+    "reset": "Reset",
+    "loading": "Loading catalog …",
+    "error": "Catalog currently unavailable.",
+    "scale": {
+      "environments": "Environments (Prod/Staging/Dev)",
+      "users": "Users",
+      "data": "Data volume",
+      "nodes": "Nodes",
+      "hosting": "Hosting",
+      "sla": "SLA"
+    },
+    "hosting": {
+      "hetzner": "Hetzner",
+      "onprem": "On-Prem"
+    },
+    "sla": {
+      "standard": "Standard",
+      "business": "Business"
+    }
+  },
+  "form": {
+    "company": "Company",
+    "name": "Name",
+    "nameOptional": "Name (optional)",
+    "email": "Email",
+    "phone": "Phone (optional)",
+    "message": "Message",
+    "messageOptional": "Message (optional)",
+    "submitQuote": "Request a quote",
+    "error": "Something went wrong. Please try again.",
+    "thanks": "Thank you!",
+    "thanksBody": "We've received your request and will be in touch shortly."
+  },
+  "angebot": {
+    "label": "Quote",
+    "title": "Request a quote",
+    "sub": "Tell us briefly about your plans – we'll put together a tailored quote.",
+    "yourConfig": "Your configuration",
+    "noConfig": "No configuration selected – just describe your plans below."
+  }
+}

@@ -1,0 +1,397 @@
+/* Self-hosted fonts (no external CDN — visitor IPs are not sent to Google) */
+@import '@fontsource-variable/space-grotesk';
+@import '@fontsource-variable/inter';
+@import '@fontsource-variable/jetbrains-mono';
+
+@import "tailwindcss";
+
+@theme {
+  --font-heading: "Space Grotesk Variable", "Inter", sans-serif;
+  --font-body:    "Inter Variable", system-ui, sans-serif;
+  --font-mono:    "JetBrains Mono Variable", "Fira Code", monospace;
+
+  --color-bg-void:     #06090f;
+  --color-bg-base:     #0a0e16;
+  --color-bg-surface:  #10151f;
+  --color-bg-elevated: #161d2b;
+
+  /* The brand blue, taken from the "1" tile in brand/source/ — the logo is the source of
+     truth, so the accent matches the asset rather than the asset being recoloured (#76).
+     -hover and -glow keep the lightness deltas the previous ramp used (+0.061 / +0.180)
+     at this hue and saturation, so the ramp's shape survived the re-hue. */
+  --color-accent:       #339ad5;
+  --color-accent-hover: #4da7da;
+  --color-accent-soft:  rgba(51, 154, 213, 0.12);
+  /* Text/icon colour placed ON an accent surface. Not a background — do not reuse as one. */
+  --color-accent-contrast: #06090f;
+  /* Light end of the .gradient-text ramp. */
+  --color-accent-glow:     #7fc0e5;
+
+  --color-signal: #22c55e;
+  --color-warn:   #f59e0b;
+  --color-danger: #ef4444;
+
+  --color-text-primary:   #e6edf3;
+  --color-text-secondary: #8b98a9;
+  --color-text-muted:     #5b6675;
+
+  --color-hairline: rgba(255, 255, 255, 0.08);
+  --radius-card:    12px;
+
+  /* Elevation. Dark-mode depth is not light-mode depth: a black shadow on #06090f is
+     nearly invisible — there is no headroom below the background. Each level therefore
+     pairs a drop shadow with an inset top highlight, so the plane reads as catching
+     light from above. The highlight strengthens with the shadow; drop the insets and
+     the four levels collapse into indistinguishable blurs. */
+  --shadow-plane-1: 0 1px 2px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  --shadow-plane-2: 0 4px 12px -2px rgba(0, 0, 0, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  --shadow-plane-3: 0 12px 32px -4px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  --shadow-lift:    0 20px 48px -8px rgba(0, 0, 0, 0.7), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+
+  /* One hue per pillar. Every one is deliberately clear of --color-signal (green),
+     --color-warn (amber) and --color-danger (red): reusing a status colour would make a
+     pillar card read as a status — a green card saying "healthy", an amber one
+     "degraded". That collision is why the obvious green/amber picks are absent.
+     core-platform keeps the brand blue because it is the foundation.
+     Known tension: pillar-custom (#f97316) sits near --color-warn (#f59e0b). They never
+     appear adjacent. If it reads wrong in situ, swap it to slate — "bespoke, no fixed
+     colour" — rather than nudging it toward another hue and re-opening the collision.
+     Known tension: since core-platform followed the brand to #339ad5 (#76) it sits 13.1°
+     from security-ops (#06b6d4), down from 28.6°, and the two SHARE A ROW on /leistungen
+     at lg:grid-cols-3. Unlike the pair above, these are co-visible. Accepted rather than
+     fixed: moving security-ops needs a hue ≥4.5:1 on bg-surface and ≥20° from every other
+     pillar AND from signal/warn/danger, and the whole space yields one candidate, #4d8c84
+     — a muddy teal, strictly worse than the vivid cyan. Brand blue at 202° simply eats the
+     cyan corridor. The cost is variety, not function: each pillar still has its own icon
+     and title, and nothing here reads as a status. Do not "fix" this by nudging
+     security-ops without re-running that search.
+     Hues are AA-constrained, not free: they carry mono-label text (0.72rem) on
+     bg-surface #10151f, so each needs 4.5:1 there. #8b5cf6 was the original violet and
+     scored 4.32 — violet-400 is the lightest thing that clears the bar. Re-check any
+     hue you change: blue 5.85, violet 6.72, cyan 7.53, pink 5.18, orange 6.52. */
+  --color-pillar-core-platform: #339ad5;
+  --color-pillar-gitops-k8s:    #a78bfa;
+  --color-pillar-security-ops:  #06b6d4;
+  --color-pillar-collab-apps:   #ec4899;
+  --color-pillar-custom:        #f97316;
+
+  /* Ambient ramp. Separate tokens from the pillar hues even where they nearly match:
+     one is brand identity, the other is lighting. Collapsing them would mean a future
+     brand-colour change silently redecorates the background.
+     That change arrived in #76: the brand moved #2e7dff -> #339ad5 and the ramp did NOT
+     follow — it is lighting, and it still lights the page the way it was tuned to. The
+     hue it happens to hold is no longer the brand's; that is the point, not drift. */
+  --color-ramp-near: #2e7dff;  /* top of page */
+  --color-ramp-mid:  #7c5cff;  /* middle */
+  --color-ramp-far:  #0e7490;  /* bottom */
+
+  /* The rack scene's material and lighting palette (#82, igloo register). These are
+     PHYSICAL surface/light colours, tuned against tone mapping + bloom in the visual
+     harness — they will look wrong pasted into flat 2D UI, and UI greys will look wrong
+     in the scene. That is why they are separate tokens rather than reuses of bg-*: the
+     two sets answer to different renderers. Retune by screenshot, not by eye on hex. */
+  --color-scene-metal:      #181e29;  /* rails, caps */
+  --color-scene-metal-deep: #0c1017;  /* side + back panels */
+  --color-scene-plate:      #141a24;  /* node faceplates */
+  --color-scene-vent:       #070a10;  /* louvre inserts */
+  --color-scene-handle:     #242c3a;  /* node handles */
+  --color-scene-cavity:     #05070b;  /* rack interior + unlit LED body */
+  --color-scene-floor:      #07090c;
+  --color-scene-key:        #cfe2f0;  /* main directional */
+  --color-scene-rim:        #5d8fb8;  /* back-left edge light */
+  --color-scene-fill:       #7ba4c4;  /* frontal readability + ambient + ceiling strips */
+  --color-scene-grid:       #141b26;  /* raised-floor tile seams */
+  --color-scene-wall:       #0a0e15;  /* room walls, mostly fog-eaten */
+
+  --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+:root { color-scheme: dark; }
+
+body {
+  background-color: var(--color-bg-base);
+  color: var(--color-text-primary);
+  font-family: var(--font-body);
+}
+
+/* Every utility below uses @utility, NOT `@layer utilities { … }`.
+   `@layer utilities` is the Tailwind v3 idiom. In v4, `@import "tailwindcss"` emits the
+   generated utilities into that same native layer, so a hand-written block appended to it
+   lands AFTER them at equal specificity (0,1,0) and silently outranks Tailwind's own
+   utilities — `surface-card border-accent` would keep the hairline border. @utility is the
+   v4 API: it sorts custom utilities by property count, so a 1-property `border-accent`
+   correctly beats a 3-property `surface-card`, and variants (`hover:`, `sm:`) work. */
+
+/* The single vertical rhythm for every page section. 6rem (=py-24) over the previously
+   most-common py-16: uniform generous space is the property being borrowed from HashiCorp.
+   Change it here and the whole site follows. */
+@utility section {
+  margin-inline: auto;
+  max-width: 80rem;
+  padding-inline: 1.5rem;
+  padding-block: 6rem;
+}
+/* Modifiers — compose onto .section, e.g. class="section section-narrow section-top".
+   They win over .section by defining fewer properties (v4 sorts custom utilities by
+   property count), not by source order. */
+@utility section-narrow { max-width: 48rem; }
+@utility section-top    { padding-block-start: 8rem; }
+
+@utility field-input {
+  width: 100%;
+  border-radius: var(--radius-card);
+  border: 1px solid var(--color-hairline);
+  background-color: var(--color-bg-surface);
+  padding: 0.5rem 0.75rem;
+  color: var(--color-text-primary);
+  /* Must match .focus-ring exactly — @utility cannot share one rule across two names, so
+     this is a deliberate duplicate. Guard check 5 enforces it; a comment would not. */
+  &:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+  }
+}
+
+/* A SIZE scale, not a tag scale — pick by visual weight. Whether an element is
+   <h1>/<h2>/<h3> is decided by document structure, independently.
+   Every heading pairs a line-height with its font-size. Tailwind's text-* utilities
+   ship that pairing; a bare font-size would inherit Preflight's 1.5 instead. */
+@utility heading-hero {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 2.25rem;
+  line-height: 1.15;
+  color: var(--color-text-primary);
+  @media (min-width: 640px) { font-size: 3.75rem; }
+}
+
+@utility heading-1 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.875rem;
+  line-height: 1.2;
+  color: var(--color-text-primary);
+  @media (min-width: 640px) { font-size: 2.25rem; }
+}
+
+@utility heading-2 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 1.25;
+  color: var(--color-text-primary);
+}
+
+@utility heading-3 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.35;
+  color: var(--color-text-primary);
+}
+
+/* 1.125rem (=text-lg), the dense card sub-heading size used by plattform and
+   module-selector. Exists so they migrate without resizing to .heading-3's 1.25rem. */
+@utility heading-4 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 1.125rem;
+  line-height: 1.4;
+  color: var(--color-text-primary);
+}
+
+@utility surface-card {
+  background-color: var(--color-bg-surface);
+  border: 1px solid var(--color-hairline);
+  border-radius: var(--radius-card);
+}
+
+@utility topology-grid {
+  background-image: radial-gradient(circle at 1px 1px,
+    color-mix(in srgb, var(--color-accent) 15%, transparent) 1px, transparent 0);
+  background-size: 40px 40px;
+}
+
+@utility mono-label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+}
+
+@utility accent-button {
+  background-color: var(--color-accent);
+  color: var(--color-accent-contrast);
+  font-weight: 600;
+  border-radius: var(--radius-card);
+  transition: background-color 0.18s var(--ease-out-soft);
+  &:hover { background-color: var(--color-accent-hover); }
+}
+
+@utility ghost-button {
+  background-color: transparent;
+  color: var(--color-text-primary);
+  border: 1px solid var(--color-hairline);
+  border-radius: var(--radius-card);
+  transition: border-color 0.18s var(--ease-out-soft);
+  &:hover { border-color: var(--color-accent); }
+}
+
+@utility status-dot {
+  width: 0.5rem; height: 0.5rem; border-radius: 9999px;
+  background-color: var(--color-signal);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-signal) 15%, transparent);
+}
+
+@utility gradient-text {
+  background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-glow) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Must match .field-input's focus ring exactly — see the note there. Guard check 5
+   compares the two blocks and fails the build if they drift apart. */
+@utility focus-ring {
+  &:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+  }
+}
+
+/* Was a guard with nothing to guard — written for the IntersectionObserver directive #4
+   specified and never delivered. Now CSS-only: an IO reveal must start content at
+   opacity:0, and this page is RenderMode.Server, so a hydration failure would leave every
+   section below the fold permanently invisible. Here, no support means simply visible.
+   Both conditions matter: Firefox Nightly shipped animation-timeline before
+   animation-range, so testing only the timeline passes while the timing is wrong. */
+@utility reveal {
+  @supports (animation-timeline: view()) and (animation-range: entry 0% cover 30%) {
+    animation: reveal-in linear both;
+    animation-timeline: view();
+    /* Finish well before the element centres, or it is still fading at read time. */
+    animation-range: entry 0% cover 30%;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes reveal-in {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: none; }
+}
+
+/* .surface-card that sits above the page rather than beside it.
+   Defines more properties than .surface-card, so v4's property-count sort emits it
+   FIRST — meaning .surface-card wins if both land on one element. They do not fight
+   regardless: the three overlapping properties carry identical values. */
+@utility surface-raised {
+  background-color: var(--color-bg-surface);
+  border: 1px solid var(--color-hairline);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-plane-2);
+  transition: box-shadow 0.24s var(--ease-out-soft), translate 0.24s var(--ease-out-soft),
+              border-color 0.24s var(--ease-out-soft);
+  &:hover {
+    box-shadow: var(--shadow-lift);
+    translate: 0 -2px;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+    &:hover { translate: none; }
+  }
+}
+
+/* The ambient ramp: three glows handing off down the page.
+   Opacity, not hue, is what animates — background-image does not interpolate between
+   colour stops, so animating it swaps hard rather than drifting. All three glows are
+   always painted; only their opacity moves, which the compositor handles without
+   touching layout or paint.
+
+   Each glow owns its whole animation rather than inheriting a shared shorthand from
+   .ramp-glow. That is deliberate: animation-range is a reset-only sub-property of the
+   animation shorthand, so a shared shorthand elsewhere would silently reset each glow's
+   range unless it happened to emit first — a correctness property resting on nothing
+   but declaration counts. Self-contained utilities cannot break that way.
+
+   The three keyframe sets exist because the jobs differ: near must ALREADY be lit at
+   scroll 0 (the hero is the screen this whole change exists to fix — opening it unlit
+   defeats the point), far must STAY lit at scroll 100 (the CTA band and footer live
+   there, and dimming the page exactly as a visitor reaches the conversion point is
+   backwards). Only mid both arrives and leaves. */
+@utility ramp-glow {
+  position: fixed;
+  inset: 0;
+  opacity: 0;
+}
+
+/* No support, and reduced motion, both settle on one lit hue rather than a black page.
+   Without this the @supports fallback would leave every glow at opacity:0. */
+@supports not (animation-timeline: scroll()) {
+  .ramp-glow-near { opacity: 0.5; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ramp-glow { animation: none; }
+  .ramp-glow-near { opacity: 0.5; }
+}
+
+@utility ramp-glow-near {
+  background: radial-gradient(60rem 60rem at 70% 0%,
+    color-mix(in srgb, var(--color-ramp-near) 18%, transparent), transparent 70%);
+  @supports (animation-timeline: scroll()) {
+    animation: ramp-open linear both;
+    animation-timeline: scroll(root block);
+    animation-range: 0% 40%;
+  }
+}
+
+@utility ramp-glow-mid {
+  background: radial-gradient(60rem 60rem at 20% 50%,
+    color-mix(in srgb, var(--color-ramp-mid) 16%, transparent), transparent 70%);
+  @supports (animation-timeline: scroll()) {
+    animation: ramp-pass linear both;
+    animation-timeline: scroll(root block);
+    animation-range: 20% 75%;
+  }
+}
+
+@utility ramp-glow-far {
+  background: radial-gradient(60rem 60rem at 80% 100%,
+    color-mix(in srgb, var(--color-ramp-far) 18%, transparent), transparent 70%);
+  @supports (animation-timeline: scroll()) {
+    animation: ramp-close linear both;
+    animation-timeline: scroll(root block);
+    animation-range: 60% 100%;
+  }
+}
+
+/* Lit at scroll 0, hands off to mid. */
+@keyframes ramp-open {
+  0%   { opacity: 0.5; }
+  75%  { opacity: 0.5; }
+  100% { opacity: 0; }
+}
+/* Arrives and leaves. */
+@keyframes ramp-pass {
+  0%   { opacity: 0; }
+  25%  { opacity: 0.5; }
+  75%  { opacity: 0.5; }
+  100% { opacity: 0; }
+}
+/* Arrives and stays — still lit at scroll 100. */
+@keyframes ramp-close {
+  0%   { opacity: 0; }
+  25%  { opacity: 0.5; }
+  100% { opacity: 0.5; }
+}
+
+/* Four drift distances as utilities, so the stack needs no [style] binding for --drift.
+   Values, not a scale — there are exactly four planes and there will not be a fifth. */
+@utility drift-15 { --drift: 15px; }
+@utility drift-30 { --drift: 30px; }
+@utility drift-45 { --drift: 45px; }
+@utility drift-60 { --drift: 60px; }

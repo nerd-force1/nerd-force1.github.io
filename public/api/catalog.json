@@ -1,0 +1,184 @@
+{
+  "version": 1,
+  "currency": "EUR",
+  "modules": [
+    {
+      "slug": "core-platform",
+      "name": "Core Platform",
+      "base_monthly": 1500,
+      "sub_services": [
+        {
+          "key": "vault",
+          "name": "HashiCorp Vault"
+        },
+        {
+          "key": "keycloak",
+          "name": "Keycloak SSO"
+        },
+        {
+          "key": "netbird",
+          "name": "NetBird Mesh-VPN"
+        },
+        {
+          "key": "traefik",
+          "name": "Traefik"
+        }
+      ]
+    },
+    {
+      "slug": "gitops-k8s",
+      "name": "GitOps Kubernetes",
+      "base_monthly": 3500,
+      "sub_services": [
+        {
+          "key": "rke2",
+          "name": "RKE2 Cluster"
+        },
+        {
+          "key": "argocd",
+          "name": "Argo CD"
+        },
+        {
+          "key": "ceph",
+          "name": "Ceph Storage"
+        },
+        {
+          "key": "monitoring",
+          "name": "kube-prometheus-stack"
+        }
+      ]
+    },
+    {
+      "slug": "security-ops",
+      "name": "Security Operations",
+      "base_monthly": 2500,
+      "sub_services": [
+        {
+          "key": "wazuh",
+          "name": "Wazuh SIEM/XDR"
+        },
+        {
+          "key": "opencti",
+          "name": "OpenCTI"
+        },
+        {
+          "key": "logs",
+          "name": "Zentrales Log-Management"
+        },
+        {
+          "key": "ir",
+          "name": "Incident Response"
+        }
+      ]
+    },
+    {
+      "slug": "collab-apps",
+      "name": "Collaboration & Apps",
+      "base_monthly": 900,
+      "sub_services": [
+        {
+          "key": "nextcloud",
+          "name": "Nextcloud"
+        },
+        {
+          "key": "paperless",
+          "name": "Paperless-ngx"
+        },
+        {
+          "key": "gitlab",
+          "name": "GitLab CE"
+        },
+        {
+          "key": "vaultwarden",
+          "name": "Vaultwarden"
+        }
+      ]
+    },
+    {
+      "slug": "custom",
+      "name": "Custom Engineering",
+      "base_monthly": null,
+      "sub_services": []
+    }
+  ],
+  "pricing": {
+    "environment_step": 0.15,
+    "sla_factors": {
+      "standard": 1.0,
+      "business": 1.25
+    },
+    "hosting_factors": {
+      "hetzner": 1.0,
+      "onprem": 1.1
+    },
+    "bands": {
+      "users": [
+        {
+          "id": "1-25",
+          "label": "1–25",
+          "factor": 0.0
+        },
+        {
+          "id": "26-100",
+          "label": "26–100",
+          "factor": 0.15
+        },
+        {
+          "id": "101-500",
+          "label": "101–500",
+          "factor": 0.35
+        },
+        {
+          "id": "500+",
+          "label": "500+",
+          "factor": 0.6
+        }
+      ],
+      "data": [
+        {
+          "id": "<1tb",
+          "label": "< 1 TB",
+          "factor": 0.0
+        },
+        {
+          "id": "1-10tb",
+          "label": "1–10 TB",
+          "factor": 0.1
+        },
+        {
+          "id": "10-100tb",
+          "label": "10–100 TB",
+          "factor": 0.25
+        },
+        {
+          "id": "100tb+",
+          "label": "100 TB+",
+          "factor": 0.5
+        }
+      ],
+      "nodes": [
+        {
+          "id": "1-3",
+          "label": "1–3",
+          "factor": 0.0
+        },
+        {
+          "id": "4-10",
+          "label": "4–10",
+          "factor": 0.15
+        },
+        {
+          "id": "11-30",
+          "label": "11–30",
+          "factor": 0.35
+        },
+        {
+          "id": "30+",
+          "label": "30+",
+          "factor": 0.6
+        }
+      ]
+    }
+  },
+  "disclaimer": "Alle Preise sind Richtwerte. Der Endpreis ist ein individuelles Angebot."
+}

@@ -1,0 +1,389 @@
+{
+  "brand": {
+    "homeAlt": "Nerd-Force1 – zur Startseite",
+    "logoAlt": "Nerd-Force1 – use the force."
+  },
+  "common": {
+    "loading": "Wird geladen...",
+    "error": "Fehler",
+    "back": "Zurück",
+    "next": "Weiter",
+    "submit": "Absenden",
+    "cancel": "Abbrechen",
+    "close": "Schließen",
+    "learnMore": "Mehr erfahren",
+    "contactUs": "Kontakt aufnehmen",
+    "bookConsultation": "Beratung buchen"
+  },
+  "nav": {
+    "home": "Start",
+    "leistungen": "Leistungen",
+    "loesungen": "Lösungen",
+    "beratung": "Beratung",
+    "demo": "Demo",
+    "services": "Leistungen",
+    "platform": "Plattform",
+    "configurator": "Konfigurator",
+    "about": "Über uns",
+    "contact": "Kontakt",
+    "book": "Gespräch anfragen",
+    "menu": "Menü",
+    "lang": {
+      "de": "DE",
+      "en": "EN"
+    }
+  },
+  "consent": {
+    "text": "Wir verwenden nur essenzielle Cookies.",
+    "accept": "Akzeptieren",
+    "decline": "Ablehnen"
+  },
+  "page": {
+    "home": { "title": "Wir bauen und betreiben deine IT-Infrastruktur." },
+    "services": { "title": "Leistungen" },
+    "serviceDetail": { "title": "Leistung" },
+    "platform": { "title": "Plattform" },
+    "configurator": { "title": "Infrastruktur-Konfigurator" },
+    "about": { "title": "Über uns" },
+    "contact": { "title": "Kontakt" }
+  },
+  "hero": {
+    "headline": "Infrastruktur, die mitdenkt.",
+    "subheadline": "Kubernetes. GitOps. WASM. Maßgeschneidert für Ihr Unternehmen.",
+    "cta": {
+      "primary": "Beratung buchen",
+      "secondary": "Demo erleben"
+    }
+  },
+  "techHoneycomb": {
+    "title": "Unser Stack",
+    "subtitle": "Modernste Technologien, erprobt im Produktionseinsatz."
+  },
+  "valueProposition": {
+    "title": "Warum Nerd-Force1?",
+    "items": {
+      "speed": {
+        "title": "Geschwindigkeit",
+        "body": "Von der Idee zur Production in Tagen, nicht Monaten."
+      },
+      "reliability": {
+        "title": "Zuverlässigkeit",
+        "body": "99,9 % Uptime durch GitOps und automatisierte Failover-Strategien."
+      },
+      "expertise": {
+        "title": "Expertise",
+        "body": "Senior Engineers mit jahrelanger Erfahrung in kritischer Infrastruktur."
+      }
+    }
+  },
+  "loesungen": {
+    "title": "Lösungen für jeden Bedarf",
+    "audiences": {
+      "startup": "Startup",
+      "mittelstand": "Mittelstand",
+      "enterprise": "Enterprise"
+    },
+    "startup": {
+      "headline": "Skalieren Sie schneller als die Konkurrenz",
+      "subheadline": "Von der ersten Idee zur production-reifen Infrastruktur — in Wochen, nicht Monaten.",
+      "cta": "Kostenloses Erstgespräch buchen",
+      "features": {
+        "cicd": {
+          "title": "CI/CD vom ersten Tag",
+          "body": "Automatisierte Pipelines mit GitLab CI und ArgoCD. Ihr Code geht täglich sicher in Produktion."
+        },
+        "kubernetes": {
+          "title": "Managed Kubernetes",
+          "body": "RKE2-Cluster mit Auto-Scaling und Zero-Downtime-Deployments, betrieben und überwacht von uns."
+        },
+        "cost": {
+          "title": "Kostenoptimiert skalieren",
+          "body": "Ressource-effiziente Architekturen und FinOps-Strategien, damit Ihre Cloud-Kosten mit dem Wachstum Schritt halten."
+        }
+      }
+    },
+    "mittelstand": {
+      "headline": "Zuverlässigkeit, auf die Sie sich verlassen können",
+      "subheadline": "Bewährte Infrastruktur für Unternehmen, die keine ungeplanten Ausfallzeiten tolerieren.",
+      "cta": "Beratungsgespräch vereinbaren",
+      "features": {
+        "sla": {
+          "title": "99,9 % Uptime garantiert",
+          "body": "GitOps-gesteuerte Deployments mit automatischen Rollbacks und aktiven Failover-Mechanismen."
+        },
+        "integration": {
+          "title": "Nahtlose Systemintegration",
+          "body": "Verbindung von On-Premise-Systemen, ERP und modernen Cloud-Diensten in einer einheitlichen Plattform."
+        },
+        "compliance": {
+          "title": "DSGVO & Compliance",
+          "body": "Rechtskonforme Architekturen, Datenverschlüsselung und lückenlose Audit-Logs für regulierte Branchen."
+        }
+      }
+    },
+    "enterprise": {
+      "headline": "Infrastruktur auf Enterprise-Niveau",
+      "subheadline": "Multi-Cluster-Setups, maßgeschneiderte Sicherheit und dedizierter Senior-Support für anspruchsvolle Organisationen.",
+      "cta": "Enterprise-Paket anfragen",
+      "features": {
+        "multicluster": {
+          "title": "Multi-Cluster & Multi-Region",
+          "body": "Hochverfügbare Kubernetes-Deployments über mehrere Rechenzentren und Regionen — ohne Single Point of Failure."
+        },
+        "security": {
+          "title": "Sicherheitshärtung & Audits",
+          "body": "BSI-konforme Härtung, Zero-Trust-Netzwerke und regelmäßige Penetrationstests durch zertifizierte Engineers."
+        },
+        "support": {
+          "title": "Dedizierter 24/7-Support",
+          "body": "Direkter Zugang zu Senior Engineers, SLA-gesicherte Reaktionszeiten und proaktives Monitoring rund um die Uhr."
+        }
+      }
+    }
+  },
+  "leistungen": {
+    "label": "Leistungen",
+    "title": "Was wir für dich bauen und betreiben",
+    "sub": "Von der Basis-Plattform bis zu Managed Security – modular kombinierbar.",
+    "back": "Alle Leistungen",
+    "includes": "Das ist enthalten",
+    "notFound": "Diese Leistung gibt es nicht."
+  },
+  "beratung": {
+    "title": "Beratung buchen",
+    "subtitle": "30 Minuten, kostenlos, unverbindlich.",
+    "form": {
+      "name": "Ihr Name",
+      "email": "E-Mail-Adresse",
+      "company": "Unternehmen",
+      "message": "Ihre Anfrage"
+    }
+  },
+  "stackBuilder": {
+    "title": "Stack Builder",
+    "subtitle": "Stellen Sie Ihren individuellen Technologie-Stack zusammen.",
+    "generate": "Stack generieren",
+    "reset": "Zurücksetzen"
+  },
+  "terminalDemo": {
+    "title": "Live Demo",
+    "subtitle": "Erleben Sie unsere Infrastruktur in Echtzeit.",
+    "start": "Demo starten",
+    "stop": "Demo stoppen"
+  },
+  "footer": {
+    "company": "Unternehmen",
+    "tagline": "Wir bauen und betreiben deine IT-Infrastruktur. At scale.",
+    "legal": "Rechtliches",
+    "imprint": "Impressum",
+    "privacy": "Datenschutz",
+    "status": "Alle Systeme betriebsbereit",
+    "links": {
+      "impressum": "Impressum",
+      "datenschutz": "Datenschutz",
+      "kontakt": "Kontakt"
+    },
+    "copyright": "© {{year}} Nerd-Force1. Alle Rechte vorbehalten."
+  },
+  "impressum": {
+    "label": "Rechtliches",
+    "title": "Impressum",
+    "updated": "",
+    "sections": [
+      { "title": "Angaben gemäß § 5 DDG", "body": "nerd_force1 UG\nHerner Str. 299\nGebäude B29\n44809 Bochum\nDeutschland" },
+      { "title": "Vertreten durch", "body": "Odin Holmes" },
+      { "title": "Kontakt", "body": "Telefon: 0234 934 511 60\nE-Mail: contact@nerd-force1.de" },
+      { "title": "Registereintrag", "body": "Eintragung im Handelsregister.\nRegistergericht: Amtsgericht Bochum\nRegisternummer: HRB 16979" },
+      { "title": "Umsatzsteuer-ID", "body": "Umsatzsteuer-Identifikationsnummer gemäß § 27a Umsatzsteuergesetz:\nDE815744003" },
+      { "title": "Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV", "body": "Odin Holmes\nnerd_force1 UG\nHerner Str. 299\nGebäude B29\n44809 Bochum" },
+      { "title": "Streitschlichtung", "body": "Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: https://ec.europa.eu/consumers/odr/. Wir sind nicht verpflichtet und nicht bereit, an einem Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen." }
+    ]
+  },
+  "datenschutz": {
+    "label": "Rechtliches",
+    "title": "Datenschutzerklärung",
+    "updated": "Stand: 14.07.2026",
+    "sections": [
+      { "title": "1. Verantwortlicher", "body": "Verantwortlich für die Datenverarbeitung auf dieser Website ist:\nnerd_force1 UG\nHerner Str. 299\nGebäude B29\n44809 Bochum\nE-Mail: contact@nerd-force1.de" },
+      { "title": "2. Hosting", "body": "Diese Website wird auf eigener bzw. selbst verwalteter Infrastruktur innerhalb der Europäischen Union betrieben. Es werden keine Inhalte von externen Content-Delivery-Netzwerken nachgeladen. Schriftarten werden lokal vom eigenen Server ausgeliefert – es findet keine Übermittlung an Dritte (z. B. Google Fonts) statt." },
+      { "title": "3. Server-Logdateien", "body": "Beim Aufruf der Website werden technisch notwendige Zugriffsdaten (u. a. IP-Adresse, Datum und Uhrzeit, aufgerufene Ressource, User-Agent) temporär in Server-Logs verarbeitet. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an Betrieb und Sicherheit). Die Daten werden nach kurzer Zeit gelöscht." },
+      { "title": "4. Kontakt- und Anfrageformulare", "body": "Über das Formular „Angebot anfordern“ kannst du uns Anfragen senden. Verarbeitet werden die von dir angegebenen Daten (u. a. Name, Firma, E-Mail-Adresse, Telefonnummer, Nachricht sowie die im Konfigurator gewählte Konfiguration). Zweck ist die Bearbeitung deiner Anfrage und die Anbahnung eines Vertragsverhältnisses. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO (vorvertragliche Maßnahmen) bzw. Art. 6 Abs. 1 lit. f DSGVO. Die Daten werden gelöscht, sobald sie nicht mehr erforderlich sind und keine gesetzlichen Aufbewahrungspflichten entgegenstehen.\n\nDie Kontaktseite verarbeitet selbst kein Formular, sondern bietet dir die Möglichkeit der direkten Kontaktaufnahme per E-Mail (mailto-Link). In diesem Fall verarbeiten wir die von dir übermittelten Angaben ausschließlich zur Beantwortung deiner Anfrage auf Grundlage von Art. 6 Abs. 1 lit. b bzw. lit. f DSGVO." },
+      { "title": "5. E-Mail-Versand", "body": "Für den Versand von E-Mails (Benachrichtigungen und Bestätigungen im Zusammenhang mit Anfragen) setzen wir den Dienstleister Mailgun (Sinch) als Auftragsverarbeiter gemäß Art. 28 DSGVO ein. Dabei werden die zur Zustellung erforderlichen Daten (u. a. E-Mail-Adresse, Name, Inhalt der Nachricht) verarbeitet. Es besteht ein Auftragsverarbeitungsvertrag. Sofern eine Übermittlung in ein Drittland erfolgt, ist diese durch geeignete Garantien (EU-Standardvertragsklauseln) abgesichert." },
+      { "title": "6. Cookies und Einwilligung", "body": "Wir setzen ausschließlich technisch notwendige Cookies bzw. vergleichbare Speichertechniken ein, die für den Betrieb der Seite erforderlich sind (z. B. Speicherung deiner Cookie-Entscheidung und Spracheinstellung). Es werden keine Tracking-, Analyse- oder Marketing-Cookies gesetzt. Rechtsgrundlage ist § 25 Abs. 2 TDDDG sowie Art. 6 Abs. 1 lit. f DSGVO." },
+      { "title": "7. Keine Analyse- und Tracking-Dienste", "body": "Diese Website verwendet keine Webanalyse-, Tracking- oder Werbedienste und bindet keine Social-Media-Plugins ein." },
+      { "title": "8. Deine Rechte", "body": "Du hast das Recht auf Auskunft (Art. 15), Berichtigung (Art. 16), Löschung (Art. 17), Einschränkung der Verarbeitung (Art. 18), Datenübertragbarkeit (Art. 20) sowie ein Widerspruchsrecht (Art. 21 DSGVO). Zur Ausübung genügt eine formlose Nachricht an contact@nerd-force1.de." },
+      { "title": "9. Beschwerderecht", "body": "Du hast das Recht, dich bei einer Datenschutz-Aufsichtsbehörde über die Verarbeitung deiner personenbezogenen Daten zu beschweren.\nZuständige Aufsichtsbehörde: Landesbeauftragte für Datenschutz und Informationsfreiheit Nordrhein-Westfalen" },
+      { "title": "10. Aktualität", "body": "Diese Datenschutzerklärung wird bei Bedarf angepasst, um sie an geänderte Rechtslage oder Verarbeitungen anzupassen." }
+    ]
+  },
+  "cta": {
+    "title": "Bereit, deine Infrastruktur abzugeben – nicht die Kontrolle?",
+    "sub": "Stell dir deinen Stack zusammen oder sprich direkt mit uns.",
+    "configure": "Infrastruktur konfigurieren",
+    "book": "Gespräch anfragen",
+    "quote": "Angebot anfordern",
+    "learnMore": "Mehr erfahren"
+  },
+  "home": {
+    "badge": "Managed Infrastructure · Made in EU",
+    "hero": {
+      "title": "Wir bauen und betreiben deine IT-Infrastruktur.",
+      "accent": "At scale.",
+      "sub": "Souveräne, selbst gehostete Plattformen statt Public-Cloud-Abhängigkeit – von Identität und Secrets über Kubernetes bis Security Operations. Alles als Code, alles betreut.",
+      "services": "Leistungen ansehen"
+    },
+    "stats": {
+      "a": { "value": "6 Jahre", "label": "im Betrieb" },
+      "b": { "value": "100+", "label": "Nodes & Geräte" },
+      "c": { "value": "EU", "label": "Datenhaltung & Souveränität" }
+    }
+  },
+  "aw40": {
+    "label": "Referenz",
+    "title": "Autowerkstatt 4.0",
+    "body": "Im Rahmen des BMWK-geförderten Projekts Autowerkstatt 4.0 haben wir in Zusammenarbeit mit der THGA Bochum an einer Plattform für sicheres Teilen von Daten und KI-Modellen in der Werkstattbranche mitgewirkt.",
+    "context": "Autowerkstatt 4.0 ist ein Forschungsprojekt des Bundesministeriums für Wirtschaft und Klimaschutz. Zum Konsortium gehören unter anderem DEKRA, DFKI, die Hochschule Osnabrück, Vergölst und die THGA Bochum."
+  },
+  "values": {
+    "sovereign": { "title": "Souverän", "desc": "Deine Daten, deine Hardware oder EU-Cloud. Kein Vendor-Lock-in." },
+    "code": { "title": "Alles als Code", "desc": "Reproduzierbar und auditierbar. Keine Snowflake-Server." },
+    "security": { "title": "Security-first", "desc": "Vault, SSO, Mesh-VPN und Wazuh ab Tag eins." },
+    "managed": { "title": "Managed", "desc": "Wir bauen und betreiben deine Plattform – als Code, nachvollziehbar." }
+  },
+  "plattform": {
+    "label": "Plattform",
+    "title": "Die Technologie hinter dem Service",
+    "sub": "Bewährte Open-Source-Bausteine, integriert und betrieben nach GitOps-Prinzipien.",
+    "groups": {
+      "identity": "Identität, Secrets & Netzwerk",
+      "cluster": "Cluster & GitOps",
+      "security": "Security & Observability",
+      "apps": "Collaboration & Apps"
+    }
+  },
+  "about": {
+    "label": "Über uns",
+    "title": "Klein, spezialisiert, seit sechs Jahren im Betrieb.",
+    "body1": "nerd_force1 ist eine kleine Spezialistin für souveräne Infrastruktur aus Bochum. Seit sechs Jahren bauen und betreiben wir selbst gehostete Plattformen – aktuell über 100 Nodes und Geräte. Kein Vertrieb, keine Zwischenebene: Du sprichst direkt mit der Person, die deine Infrastruktur baut.",
+    "body2": "Wir arbeiten stark automatisiert und alles als Code. Das ist der Grund, warum ein sehr kleines Team eine Plattform dieser Größe betreiben kann – und warum wir ehrlich sagen, was wir nicht leisten: einen 24×7-Bereitschaftsdienst gibt es nicht. Wenn du den brauchst, sagen wir es dir und empfehlen jemand anderen."
+  },
+  "kontakt": {
+    "label": "Kontakt",
+    "title": "Lass uns reden",
+    "sub": "Egal ob konkretes Projekt oder erste Idee – wir melden uns schnell.",
+    "email": "E-Mail",
+    "preferredTime": "Wunschzeit (optional, z. B. „Mo–Fr vormittags“)",
+    "submit": "Nachricht senden",
+    "quotePrompt": "Du weißt schon, was du brauchst? Fordere ein unverbindliches Angebot an."
+  },
+  "pillars": {
+    "core-platform": {
+      "title": "Core Platform",
+      "oneLiner": "Identität, Secrets und Netzwerk – das Fundament, auf dem alles andere sicher läuft.",
+      "capabilities": {
+        "0": "HashiCorp Vault – Secrets, SSH-CA und OIDC-Broker",
+        "1": "Keycloak SSO – OIDC/SAML, Realm als Code",
+        "2": "NetBird Mesh-VPN – Zero-Trust-Overlay",
+        "3": "Traefik – Reverse-Proxy mit automatischem Let's-Encrypt-TLS"
+      }
+    },
+    "gitops-k8s": {
+      "title": "GitOps Kubernetes",
+      "oneLiner": "Dein privates Cloud-Cluster – deklarativ, selbstheilend, vollständig als Code.",
+      "capabilities": {
+        "0": "RKE2 HA-Cluster mit embedded etcd und Cilium",
+        "1": "Argo CD – App-of-Apps-GitOps",
+        "2": "Ceph-Storage – RBD & CephFS",
+        "3": "cert-manager, Rancher & kube-prometheus-stack"
+      }
+    },
+    "security-ops": {
+      "title": "Security Operations",
+      "oneLiner": "Erkennen, verstehen, reagieren – Managed Detection & Response für deine Infrastruktur.",
+      "capabilities": {
+        "0": "Wazuh – SIEM/XDR, Host-Intrusion-Detection & Compliance",
+        "1": "OpenCTI – Threat-Intelligence-Plattform",
+        "2": "Zentrales Log-Management",
+        "3": "Alerting & Incident-Playbooks"
+      }
+    },
+    "collab-apps": {
+      "title": "Collaboration & Apps",
+      "oneLiner": "Die Werkzeuge deines Teams – selbst gehostet, integriert, unter deiner Kontrolle.",
+      "capabilities": {
+        "0": "Nextcloud – Dateien mit Keycloak-SSO",
+        "1": "Paperless-ngx – Dokumentenmanagement",
+        "2": "GitLab CE & Harbor – Code, CI und Registry",
+        "3": "Vaultwarden & Monitoring-Dashboards"
+      }
+    },
+    "custom": {
+      "title": "Custom Engineering",
+      "oneLiner": "Dein Setup ist besonders? Wir bauen es. Von der Migration bis zur Spezialintegration.",
+      "capabilities": {
+        "0": "Bestandsmigrationen",
+        "1": "Air-Gapped- & On-Prem-Deployments",
+        "2": "Spezialintegrationen",
+        "3": "Infrastruktur-Audits & Beratung"
+      }
+    }
+  },
+  "errors": {
+    "notFound": {
+      "title": "404 – Seite nicht gefunden",
+      "body": "Die gesuchte Seite existiert nicht.",
+      "cta": "Zur Startseite"
+    },
+    "generic": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut."
+  },
+  "konfigurator": {
+    "label": "Konfigurator",
+    "title": "Bau dir deine Infrastruktur",
+    "sub": "Wähle die Bausteine und die Größenordnung – wir bauen und betreiben sie für dich.",
+    "step1": "1 · Bausteine wählen",
+    "step2": "2 · Größenordnung",
+    "from": "ab",
+    "letsTalk": "Auf Anfrage",
+    "estimate": "Geschätzte Kosten",
+    "plusCustom": "+ individuelles Custom-Paket",
+    "reset": "Zurücksetzen",
+    "loading": "Katalog wird geladen …",
+    "error": "Katalog derzeit nicht verfügbar.",
+    "scale": {
+      "environments": "Umgebungen (Prod/Staging/Dev)",
+      "users": "Nutzer",
+      "data": "Datenvolumen",
+      "nodes": "Nodes",
+      "hosting": "Hosting",
+      "sla": "SLA"
+    },
+    "hosting": {
+      "hetzner": "Hetzner",
+      "onprem": "On-Prem"
+    },
+    "sla": {
+      "standard": "Standard",
+      "business": "Business"
+    }
+  },
+  "form": {
+    "company": "Firma",
+    "name": "Name",
+    "nameOptional": "Name (optional)",
+    "email": "E-Mail",
+    "phone": "Telefon (optional)",
+    "message": "Nachricht",
+    "messageOptional": "Nachricht (optional)",
+    "submitQuote": "Angebot anfordern",
+    "error": "Etwas ist schiefgelaufen. Bitte versuche es erneut.",
+    "thanks": "Danke!",
+    "thanksBody": "Wir haben deine Anfrage erhalten und melden uns in Kürze."
+  },
+  "angebot": {
+    "label": "Angebot",
+    "title": "Angebot anfordern",
+    "sub": "Erzähl uns kurz von deinem Vorhaben – wir erstellen ein individuelles Angebot.",
+    "yourConfig": "Deine Konfiguration",
+    "noConfig": "Keine Konfiguration ausgewählt – beschreib dein Vorhaben einfach unten."
+  }
+}

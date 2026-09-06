@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  html, body { margin: 0; height: 100%; background: #06090f; overflow: hidden; }
+  canvas { display: block; }
+  #err { color: #f66; font: 14px monospace; padding: 20px; white-space: pre-wrap; }
+</style>
+</head>
+<body>
+<div id="err"></div>
+<script type="importmap">
+{ "imports": {
+    "three": "../node_modules/three/build/three.module.js",
+    "three/examples/jsm/": "../node_modules/three/examples/jsm/"
+} }
+</script>
+<!-- Top-level await in this module holds the window load event until the scene has
+     rendered, so `firefox --headless --screenshot` captures a finished frame. -->
+<script type="module">
+const err = (m) => { document.getElementById('err').textContent = m; };
+try {
+  const scene = await import('./scene.js');
+  await scene.renderOnce();
+} catch (e) {
+  err('HARNESS ERROR:\n' + (e.stack || e.message || String(e)));
+}
+</script>
+</body>
+</html>
